@@ -1,0 +1,80 @@
+/*
+Theme Name: WFX Girder
+Theme URI: http://wonderflux.com/
+Description: This provides a working example of using the Wonderflux theme framework with a child theme. IMPORTANT - REQUIRES the Wonderflux framework, WordPress v3.0 and above minimum.
+Author: Jonnya Freelance Creative
+Author URI: http://jonnya.net/
+Version: 0.81
+Template: wonderflux
+Tags: wonderflux
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* @group General rules */
+.col-light { color: #fff; }
+.col-light-alt { color: #d7d7d7; }
+.col-mid { color: #757575; }
+.col-mid-alt { color: #909090; }
+.col-dark { color: #515151; }
+.col-dark-alt { color: #000; }
+.col-accent { color: #39737e; }
+.col-accent-alt { color: #00a9ac; }
+
+/* @group Typography */
+
+p { color: #757575; font-size: 1.2em; }
+p.meta { margin-bottom: 9px; }
+h1, h3, h4, h5, h6 { color: #39737e; }
+h2 { color: #515151; font-size: 2.5em; }
+h2.entry-title { margin-bottom: 0; margin-top: 0; }
+h3 { font-size: 1.8em; }
+
+/* @end */
+/* @end */
+
+/* @group Links */
+a, a:visited, a:active { color: #39737e; text-decoration: none; }
+a:hover { color: #00a9ac; }
+.col-light a { color: #fff; }
+.col-light a:hover { color: #d7d7d7; }
+/* @end */
+
+/* @group Header */
+#header-bg-1 { background: url(images/bg-flowers-lrg.png) repeat center bottom; }
+#header-bg-2 { background: url(images/bg_grad_bottom.png) repeat-x 0 bottom; }
+#header-content { background: url(../wonderflux/wf-content/backgrounds/solid-transparent-light/transparent_bg_light_10.png) repeat center top; }
+.box-header { padding: 20px 10px 0 10px; }
+/* @end */
+
+
+/* @group Main content */
+#main-bg-1 { background: url(images/bg_grad_bottom_lrg_light.png) repeat-x center bottom; }
+#main-content { padding-top: 20px; }
+#content { margin-top: 0; }
+#sidebar { margin-top: -4px; } /*Just helps thing line up when using default sidebar item header styling - you may need to adjust this to suit if you want pixel perfection! */
+.type-post { margin: 0 0 10px 0; border-bottom: 4px solid #d7d7d7; }
+.date-and-title { margin-bottom: 22px; }
+div.meta-content { border-top: 4px solid #e6e6e6; margin-top: 5px; padding-top: 10px; }
+.entry-content ul.wf-edit-meta { list-style-type: none; margin-left: 0; }
+img.button-more { margin-bottom: 20px; }
+
+/* @end */
+
+
+/* @group Footer */
+#footer-bg-content { padding-top: 30px; }
+#footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
+#footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }
+.footer-secondary-left div.box-footer { padding-left: 20px; }
+#footer-secondary, #footer-wfx-credit { margin-left: 20px; }
+/* @end */
+
+
+/* @group Sidebar */
+.sidebar-box, .widget-box, .wf-meta-box { padding: 0 20px 15px; }
+#sidebar ul { margin: 0; color: #757575; list-style-type: none; }
+#sidebar ul li a { list-style-type: none; font-size: 1.2em; }
+h4.sidebar-title { margin-bottom: 10px; color: #7b7b7b; border-bottom: 4px solid #e6e6e6; font-size: 1.5em; }
+/* @end */
