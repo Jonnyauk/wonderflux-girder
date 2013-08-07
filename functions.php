@@ -20,11 +20,12 @@ CONTENTS
 
 ////  1  //////////// Setup main layout css
 
+// Uncomment the code below if you wish to override the options set in the admin area - filters always take priority! 
 
-function my_wfx_size_sidebar() { return 'quarter'; }
-function my_wfx_size_content() { return 'three_quarter'; }
-add_filter('wflux_sidebar_1_size', 'my_wfx_size_sidebar');
-add_filter('wflux_content_1_size', 'my_wfx_size_content');
+// function my_wfx_size_sidebar() { return 'quarter'; }
+// function my_wfx_size_content() { return 'three_quarter'; }
+// add_filter('wflux_sidebar_1_size', 'my_wfx_size_sidebar');
+// add_filter('wflux_content_1_size', 'my_wfx_size_content');
 
 
 ////  2  //////////// Configure some Wonderflux functionality
