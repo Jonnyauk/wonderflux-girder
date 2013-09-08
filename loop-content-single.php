@@ -28,9 +28,7 @@
 			echo ' | ';
 			echo '<p class = "meta">Tagged with: ' . $tag_list . '</p>';
 		}
-		echo ' | ';
-		echo 'Written by '.ucwords(get_the_author_link());
-		echo '</p>';
+		echo '<p>' . 'Written by ' . ucwords(get_the_author_link()) . '</p>';
 		?>
 
 	</div>
