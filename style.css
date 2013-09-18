@@ -64,7 +64,7 @@ img.button-more { margin-bottom: 20px; }
 
 
 /* @group Footer */
-#footer-bg-content { padding-top: 30px; }
+#footer-content { padding-top: 30px; }
 #footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
 #footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }
 .footer-secondary-left div.box-footer { padding-left: 20px; }
