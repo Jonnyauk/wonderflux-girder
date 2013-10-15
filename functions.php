@@ -66,8 +66,8 @@ function my_wfx_theme_config() {
 
 			/* All parameters */
 			array (
-				"name" => "Above Sidebar",
-				"description" => "Drag widgets into here to include them above the sidebar on all pages.",
+				"name" => "Above sidebar",
+				"description" => "Drag widgets here to be shown below the sidebar on all pages.",
 				"location" => "wfsidebar_before_all",
 				"container" => "div",
 				"containerclass" => "widget-box",
@@ -79,8 +79,8 @@ function my_wfx_theme_config() {
 
 			/* Simpler example */
 			array (
-				"name" => "Below Homepage Sidebar",
-				"description" => "Drag widgets into here to include them below the sidebar on just the homepage.",
+				"name" => "Below homepage sidebar",
+				"description" => "Drag widgets here to be shown below the sidebar on just the homepage.",
 				"location" => "wfsidebar_after_home",
 				"titleclass" => "sidebar-title",
 				"containerclass" => "widget-box",
@@ -91,15 +91,15 @@ function my_wfx_theme_config() {
 			array (
 				"name" => "Above content",
 				"location" => "wfloop_before",
-				"description" => "Above main content.",
+				"description" => "Drag widgets here to be shown above all content.",
 				"containerclass" => "widget-box-main-content"
 			),
 
 			/* Another widget */
 			array (
-				"name" => "Below content.",
+				"name" => "Below content",
 				"location" => "wfloop_after",
-				"description" => "Below main content"
+				"description" => "Drag widgets here to be shown below all content."
 			)
 
 		)
