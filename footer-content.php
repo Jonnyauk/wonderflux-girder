@@ -35,7 +35,7 @@
 	<div <?php wfx_css('size=quarter&class=footer-secondary-right'); ?>>
 
 		<div class="box-footer">
-			<?php wfx_get_single_content('id=1&title=Y&exerptlimit=10&titlestyle=h3&morelink=Y&morelinktext=Find out more'); ?>
+			<p>I could contain any content you like - or why not put in a WordPress widget area?</p>
 		</div>
 
 	</div>
@@ -49,7 +49,7 @@
 
 		<div class="box-footer">
 			<h3>Some content</h3>
-			<p>Here is some content</p>
+			<p>Here is some more demonstration content</p>
 		</div>
 
 	</div>
