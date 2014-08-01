@@ -14,7 +14,7 @@
 		<?php
 		the_content('');
 		wfx_edit_meta('intro=N&adminlink=N&postcontrols=N&pagecontrols=Nwfcontrols=N&widgetslink=N');
-		wp_link_pages( array( 'before' => '<div class="nav-posts">' . __( 'Pages:', 'wonderflux' ), 'after' => '</div>' ) );
+		wp_link_pages( array( 'before' => '<div class="nav-posts">' . __( 'Pages:', 'wfxgirder' ), 'after' => '</div>' ) );
 		?>
 
 	</div>
