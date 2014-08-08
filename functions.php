@@ -4,10 +4,10 @@
 In this file you will find some examples of what can be done with a Wonderflux child theme.
 
 If you want to create your own child theme for Wonderflux:
-1) Duplicate the wonderflux-girder (this!) directory and all files
-2) Change directory name
-3) Call your theme something different in style.css
-4) You are good to go!
+1 - Duplicate the wfx-girder (this!) folder with all contained files.
+2 - Change the name of the folder that holds the theme (the one you duplicated in step 1).
+3 - Call your theme something different in style.css (Theme Name: YOUR NEW THEME NAME HERE).
+4 - You are good to go!
 */
 
 /*
@@ -18,9 +18,14 @@ CONTENTS
 4 - Manipulate Wonderflux from child theme examples
 */
 
+/*
+OTHER NOTES
+- Text domain for translation: 'wfxgider'
+*/
+
 ////  1  //////////// Setup main layout css
 
-// Uncomment the code below if you wish to override the options set in the admin area - filters always take priority! 
+// Un-comment the code below if you wish to override the options set in the admin area - filters always take priority!
 
 // function my_wfx_size_sidebar() { return 'quarter'; }
 // function my_wfx_size_content() { return 'three_quarter'; }
@@ -40,13 +45,15 @@ function my_wfx_layout() {
 	wfx_background_divs('depth=3&location=header');
 	wfx_background_divs('depth=2&location=footer');
 
-	add_filter('wflux_sidebar_1_display', 'N');
+	// With this filter you can remove (or conditionally remove) the sidebar
+	// Don't worry - the rest of the layout div's adapt to accomodate this automatically - cool!
+	//add_filter('wflux_sidebar_1_display', 'N');
 
 	// Insert IE6 PNG fix
 	wfx_ie6_png('location=footer');
 
 	// Insert the Cycle JQuery plugin and supporting files
-	// 'config' argument allows use of custom cycle configuration file in wonderflux-girder/js/cycle/jquery.cycle.config.js
+	// 'config' argument allows use of custom cycle configuration file in wfx-girder/js/cycle/jquery.cycle.config.js
 	wfx_js_cycle('config=theme');
 
 }
@@ -95,7 +102,7 @@ function my_wfx_theme_config() {
 				"containerclass" => "widget-box-main-content"
 			),
 
-			/* Another widget */
+			/* Another widget - as simple as it gets! */
 			array (
 				"name" => "Below content",
 				"location" => "wfloop_after",
@@ -138,13 +145,13 @@ function my_wfx_unhook_core_functions() {
 	// Shown as comment in <head> of document output
 	remove_action('wf_head_meta', 'wfx_display_css_info');
 }
-add_action('init','my_wfx_unhook_core_functions');
+//add_action('init','my_wfx_unhook_core_functions');
 
 
 ////  EXAMPLE 3 - REPLACING A CORE WONDERFLUX FUNCTION
 
 
-// By using the same name as used in the Wonderflux functions.php file, we can over-ride the existing core Wonderflux function
+// By using the same function name as used in the Wonderflux functions.php file, we can over-ride the existing core Wonderflux function
 // Often filters will be your best choice, but if you really want to do something fancy, you can using this method
 // UNCOMMENT OUT TO USE wfx_display_head_title creates the <TITLE></TITLE> tag content in your page output
 /*
