@@ -1,7 +1,7 @@
 <?php
 /**
  * Sidebar display content used as a fallback in all conditions when a sidebar-content-LOCATION.php doesn't exist in this child theme
- * @package Wonderflux Girder child theme
+ * @package Girder child theme for Wonderflux framework
  */
 ?>
 
