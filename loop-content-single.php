@@ -1,7 +1,7 @@
 <?php
 /**
  * Loop display content for a single post
- * @package Wonderflux Girder child theme
+ * @package Girder child theme for Wonderflux framework
  */
 ?>
 
