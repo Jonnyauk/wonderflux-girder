@@ -1,7 +1,7 @@
 <?php
 /**
- * Loop display content when viewing a category
- * @package Wonderflux Girder child theme
+ * Loop display content when viewing a date archive
+ * @package Girder child theme for Wonderflux framework
  */
 ?>
 
