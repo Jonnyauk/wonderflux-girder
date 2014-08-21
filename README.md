@@ -26,7 +26,7 @@ You may also view the license online: http://www.gnu.org/licenses/gpl-2.0.html
 About
 =================
 
-A demonstration child theme for the Wonderflux theme framework built for WordPress.
+A demonstration child theme for the Wonderflux WordPress theme framework - https://github.com/Jonnyauk/Wonderflux
 
 Could be used as a starter child theme, take a look at the code - lots of comments for you to learn how to use Wonderflux!
 
