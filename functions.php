@@ -168,4 +168,39 @@ function wfx_display_head_title() {
 
 }
 */
+////  6  //////////// External scripts
+
+
+/**
+ *
+ * Register all additional CSS
+ * You could register further CSS (if absolutely required!) here
+ *
+ */
+function my_wfx_register_css() {
+
+	wp_register_style(
+		'g-font-1',
+		'http://fonts.googleapis.com/css?family=Signika',
+		'',
+		'1.0',
+		'screen, projection'
+	);
+
+}
+add_action( 'wp_enqueue_scripts', 'my_wfx_register_css' );
+
+
+/**
+ *
+ * Enqueue all additional CSS
+ *
+ */
+function my_wfx_enqueue_css() {
+
+	// Signika Google font
+	wp_enqueue_style( 'g-font-1' );
+
+}
+add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_css' );
 ?>

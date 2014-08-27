@@ -26,6 +26,8 @@ You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 
 /* @group Typography */
 
+body { font-family: 'Signika', sans-serif; }
+
 p { color: #757575; font-size: 1.2em; }
 p.meta { margin-bottom: 9px; }
 h1, h3, h4, h5, h6 { color: #39737e; }
