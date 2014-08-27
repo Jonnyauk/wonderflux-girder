@@ -14,6 +14,7 @@ You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /* @group General rules */
+
 .col-light { color: #fff; }
 .col-light-alt { color: #d7d7d7; }
 .col-mid { color: #757575; }
@@ -33,24 +34,30 @@ h2.entry-title { margin-bottom: 0; margin-top: 0; }
 h3 { font-size: 1.8em; }
 
 /* @end */
+
 /* @end */
 
 /* @group Links */
+
 a, a:visited, a:active { color: #39737e; text-decoration: none; }
 a:hover { color: #00a9ac; }
 .col-light a { color: #fff; }
 .col-light a:hover { color: #d7d7d7; }
+
 /* @end */
 
 /* @group Header */
+
 #header-bg-1 { background: url(images/bg-flowers-lrg.png) repeat center bottom; }
 #header-bg-2 { background: url(images/bg_grad_bottom.png) repeat-x 0 bottom; }
 #header-content { background: url(../wonderflux/wf-content/backgrounds/solid-transparent-light/transparent_bg_light_10.png) repeat center top; }
 .box-header { padding: 20px 10px 0 10px; }
+
 /* @end */
 
 
 /* @group Main content */
+
 #main-bg-1 { background: url(images/bg_grad_bottom_lrg_light.png) repeat-x center bottom; }
 #main-content { padding-top: 20px; }
 #content { margin-top: 0; }
@@ -65,17 +72,21 @@ img.button-more { margin-bottom: 20px; }
 
 
 /* @group Footer */
+
 #footer-content { padding-top: 30px; }
 #footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
 #footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }
 .footer-secondary-left div.box-footer { padding-left: 20px; }
 #footer-secondary, #footer-wfx-credit { margin-left: 20px; }
+
 /* @end */
 
 
 /* @group Sidebar */
+
 .sidebar-box, .widget-box, .wf-meta-box { padding: 0 20px 15px; }
 #sidebar ul { margin: 0; color: #757575; list-style-type: none; }
 #sidebar ul li a { list-style-type: none; font-size: 1.2em; }
 h4.sidebar-title { margin-bottom: 10px; color: #7b7b7b; border-bottom: 4px solid #e6e6e6; font-size: 1.5em; }
+
 /* @end */
