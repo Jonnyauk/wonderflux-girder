@@ -16,6 +16,7 @@ CONTENTS
 2 - Configure some Wonderflux functionality
 3 - Configure theme setup using Wonderflux theme building functions
 4 - Manipulate Wonderflux from child theme examples
+6 - External scripts
 */
 
 /*
