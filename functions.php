@@ -16,6 +16,7 @@ CONTENTS
 2 - Configure some Wonderflux functionality
 3 - Configure theme setup using Wonderflux theme building functions
 4 - Manipulate Wonderflux from child theme examples
+5 - Editable WordPress navigation menus
 6 - External scripts
 */
 
@@ -169,6 +170,84 @@ function wfx_display_head_title() {
 
 }
 */
+
+
+////  5  //////////// Editable WordPress navigation menus
+
+
+/*
+The way the menus are inserted means that if you want to remove a menu,
+simply go to admin > Appearance > Menus > Manage locations and don't select a menu ('-- Select a Menu --' option)
+WordPress normally would then show a navigation with all of your page links in as default.
+This theme will simply not show anything - much neater!
+*/
+
+
+/**
+ * Setup menus
+ */
+function my_wfx_add_navigation(){
+	register_nav_menus( array(
+		'primary' => __( 'Primary navigation', 'wfxgirder' ),
+		'secondary' => __( 'Secondary navigation', 'wfxgirder' ),
+	) );
+}
+add_action( 'wp_loaded', 'my_wfx_add_navigation' );
+
+
+/**
+ * Insert primary navigation in a fancy way by hooking into layout outside of main container
+ * NOTE: Won't render a menu if not set (or menu is empty) in admin > Appearance > Menus / Manage locations
+ */
+function my_wfx_insert_primary_nav() {
+
+	// Setup menu data
+	// Check if it has been set, or is empty - no-one likes showing all links!
+	$this_menu = wp_nav_menu(
+		array(
+			'container_class'	=> 'header-navigation clearfix',
+			'theme_location'	=> 'primary',
+			'echo'				=> false,
+			'fallback_cb'		=> '__return_false'
+		)
+	);
+
+	if ( !empty($this_menu) ){
+		echo '<div class="wrapper header-navigation-container">';
+		echo '<div class="container">';
+		echo $this_menu;
+		echo '</div>';
+		echo '</div>';
+	}
+
+}
+add_action('wfmain_before_all_container','my_wfx_insert_primary_nav', 2);
+
+
+/**
+ * Insert footer navigation in a simpler way using a Wonderflux hook
+ * Function could be removed and just inserted straight into template file as normal
+ * NOTE: Won't render a menu if not set (or menu is empty) in admin > Appearance > Menus / Manage locations
+ */
+function my_wfx_insert_footer_nav() {
+
+	// Setup menu data
+	// Check if it has been set, or is empty - no-one likes showing all links!
+	$this_menu = wp_nav_menu(
+		array(
+			'container_class'	=> 'footer-navigation clearfix',
+			'theme_location'	=> 'secondary',
+			'echo'				=> false,
+			'fallback_cb'		=> '__return_false'
+		)
+	);
+
+	echo ( !empty($this_menu) ) ? $this_menu : '';
+
+}
+add_action('wffooter_before_content','my_wfx_insert_footer_nav', 2);
+
+
 ////  6  //////////// External scripts
 
 
