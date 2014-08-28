@@ -39,6 +39,7 @@ h3 { font-size: 1.8em; }
 
 /* @end */
 
+
 /* @group Links */
 
 a, a:visited, a:active { color: #39737e; text-decoration: none; }
@@ -47,6 +48,67 @@ a:hover { color: #00a9ac; }
 .col-light a:hover { color: #d7d7d7; }
 
 /* @end */
+
+
+/* @group Navgiation */
+
+/* @group Primary navigation and common menu styling */
+
+.header-navigation-container { background: url(images/bg_grad_top.png) repeat-x 0 bottom; padding: 18px 0 33px; }
+
+ul.menu { padding: 0 0 0 10px; }
+
+ul.menu, ul.sub-menu {
+	list-style: none;
+	margin: 0;
+}
+
+ul.menu li a {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display: block;
+	float: left;
+	font-size: 1.1em;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	padding: 7px;
+}
+
+ul.menu li a,
+ul.menu li a:visited { background-color: #d7d7d7; color: #39737e; }
+ul.menu li a:hover,
+ul.menu li ul.sub-menu li a:hover { background-color: #39737e; color: #d7d7d7; }
+
+ul.menu li.current_page_item a,
+ul.menu li.current-menu-item a,
+ul.menu li ul.sub-menu li.current_page_item a { background-color: #00a9ac; color: #ffffff; }
+/*Fixes child page hierarchy colouring*/
+ul.menu li ul.sub-menu li a,
+ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #d7d7d7; color: #39737e; }
+
+/* @end */
+
+/* @group Footer navigation */
+
+div.footer-navigation { padding-top: 20px; }
+
+div.footer-navigation ul.menu li a,
+div.footer-navigation ul.menu li a:visited { background-color: #909090; color: #d7d7d7; }
+div.footer-navigation ul.menu li a:hover,
+div.footer-navigation ul.menu li ul.sub-menu li a:hover { background-color: #39737e; color: #d7d7d7; }
+
+div.footer-navigation ul.menu li.current_page_item a,
+div.footer-navigation ul.menu li.current-menu-item a,
+div.footer-navigation ul.menu li ul.sub-menu li.current_page_item a { background-color: #00a9ac; color: #ffffff; }
+/*Fixes child page hierarchy colouring*/
+div.footer-navigation ul.menu li ul.sub-menu li a,
+div.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #909090; color: #d7d7d7; }
+
+/* @end */
+
+/* @end */
+
 
 /* @group Header */
 
@@ -75,18 +137,18 @@ img.button-more { margin-bottom: 20px; }
 
 /* @group Footer */
 
-#footer-content { padding-top: 30px; }
+#footer-content { padding-top: 22px; }
 #footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
 #footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }
-.footer-secondary-left div.box-footer { padding-left: 20px; }
-#footer-secondary, #footer-wfx-credit { margin-left: 20px; }
+.footer-secondary-left div.box-footer { padding-left: 10px; }
+#footer-secondary, #footer-wfx-credit { margin-left: 10px; }
 
 /* @end */
 
 
 /* @group Sidebar */
 
-.sidebar-box, .widget-box, .wf-meta-box { padding: 0 20px 15px; }
+.sidebar-box, .widget-box, .wf-meta-box { padding: 0 20px 15px 10px; }
 #sidebar ul { margin: 0; color: #757575; list-style-type: none; }
 #sidebar ul li a { list-style-type: none; font-size: 1.2em; }
 h4.sidebar-title { margin-bottom: 10px; color: #7b7b7b; border-bottom: 4px solid #e6e6e6; font-size: 1.5em; }
