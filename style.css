@@ -123,9 +123,9 @@ div.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { backg
 /* @group Main content */
 
 #main-bg-1 { background: url(images/bg_grad_bottom_lrg_light.png) repeat-x center bottom; }
-#main-content { padding-top: 20px; }
-#content { margin-top: 0; }
-#sidebar { margin-top: -4px; } /*Just helps thing line up when using default sidebar item header styling - you may need to adjust this to suit if you want pixel perfection! */
+#main-content { padding-top: 10px; }
+#content { margin-top: -7px; } /*Just helps things line up with the sidebar using default sidebar item header styling - you may need to adjust this to suit if you want pixel perfection! */
+
 .type-post { margin: 0 0 10px 0; border-bottom: 4px solid #d7d7d7; }
 .date-and-title { margin-bottom: 22px; }
 div.meta-content { border-top: 4px solid #e6e6e6; margin-top: 5px; padding-top: 10px; }
