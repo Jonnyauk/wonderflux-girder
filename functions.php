@@ -79,8 +79,8 @@ function my_wfx_theme_config() {
 
 			/* All parameters */
 			array (
-				"name" => "Above sidebar",
-				"description" => "Drag widgets here to be shown below the sidebar on all pages.",
+				"name" => __( 'Above sidebar', 'wfxgider' ),
+				"description" => __( 'Drag widgets here to be shown above the sidebar on all pages.', 'wfxgider' ),
 				"location" => "wfsidebar_before_all",
 				"container" => "div",
 				"containerclass" => "widget-box",
@@ -92,8 +92,8 @@ function my_wfx_theme_config() {
 
 			/* Simpler example */
 			array (
-				"name" => "Below homepage sidebar",
-				"description" => "Drag widgets here to be shown below the sidebar on just the homepage.",
+				"name" => __( 'Below homepage sidebar', 'wfxgider' ),
+				"description" => __( 'Drag widgets here to be shown below the sidebar on just the homepage.', 'wfxgider' ),
 				"location" => "wfsidebar_after_home",
 				"titleclass" => "sidebar-title",
 				"containerclass" => "widget-box",
@@ -102,17 +102,17 @@ function my_wfx_theme_config() {
 
 			/* Even simpler example! */
 			array (
-				"name" => "Above content",
+				"name" => __( 'Above content', 'wfxgider' ),
 				"location" => "wfloop_before",
-				"description" => "Drag widgets here to be shown above all content.",
+				"description" => __( 'Drag widgets here to be shown above all content.', 'wfxgider' ),
 				"containerclass" => "widget-box-main-content"
 			),
 
 			/* Another widget - as simple as it gets! */
 			array (
-				"name" => "Below content",
+				"name" => __( 'Below content', 'wfxgider' ),
 				"location" => "wfloop_after",
-				"description" => "Drag widgets here to be shown below all content."
+				"description" => __( 'Drag widgets here to be shown below all content.', 'wfxgider' )
 			)
 
 		)
