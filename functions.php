@@ -3,6 +3,10 @@
 /*
 In this file you will find some examples of what can be done with a Wonderflux child theme.
 
+I KNOW ITS BORING BUT PLEASE READ the readme.md file in the Wonderflux directory
+Wonderflux has a-lot under the hood for you to use and you don't want to miss the goodies do you?
+Also drop by http://wonderflux.com/getting-started/ for, well how to get started!
+
 If you want to create your own child theme for Wonderflux:
 1 - Duplicate the wfx-girder (this!) folder with all contained files.
 2 - Change the name of the folder that holds the theme (the one you duplicated in step 1).
