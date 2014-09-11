@@ -11,6 +11,7 @@ If you want to create your own child theme for Wonderflux:
 1 - Duplicate the wfx-girder (this!) folder with all contained files.
 2 - Change the name of the folder that holds the theme (the one you duplicated in step 1).
 3 - Call your theme something different in style.css (Theme Name: YOUR NEW THEME NAME HERE).
+5 - Search and replace 'wfxgider' in all files to replace the text domain for translation.
 4 - You are good to go!
 */
 
