@@ -1,49 +1,41 @@
 <?php
-
 /*
-In this file you will find some examples of what can be done with a Wonderflux child theme.
 
-I KNOW ITS BORING BUT PLEASE READ the readme.md file in the Wonderflux directory
-Wonderflux has a-lot under the hood for you to use and you don't want to miss the goodies do you?
-Also drop by http://wonderflux.com/getting-started/ for, well how to get started!
+This is an example child theme for the Wonderflux theme framework.
+
+Configure the layout options in admin> Appearance > Wonderflux
+Drop by http://wonderflux.com/getting-started for more information.
 
 If you want to create your own child theme for Wonderflux:
-1 - Duplicate the wfx-girder (this!) folder with all contained files.
-2 - Change the name of the folder that holds the theme (the one you duplicated in step 1).
-3 - Call your theme something different in style.css (Theme Name: YOUR NEW THEME NAME HERE).
-5 - Search and replace 'wfxgider' in all files to replace the text domain for translation.
-4 - You are good to go!
-*/
 
-/*
-CONTENTS
-1 - Setup main layout css
-2 - Configure some Wonderflux functionality
-3 - Configure theme setup using Wonderflux theme building functions
-4 - Manipulate Wonderflux from child theme examples
-5 - Editable WordPress navigation menus
-6 - External scripts
-*/
+1 - Duplicate the whole wfx-girder (this!) directory with all contained files.
+2 - Change the name of the directory (the one you duplicated in step 1).
+3 - Call your theme something different in style.css (Theme Name: My Theme).
+4 - Search and replace text string 'wfxgider' in all files
+	to replace the text domain for translation.
+5 - You are good to go!
 
-/*
-OTHER NOTES
+
+////  CONTENTS
+1 - Wonderflux theme building functions
+2 - Manipulate Wonderflux from child theme examples
+3 - Examples of filtering layout values
+4 - Editable WordPress navigation menus
+5 - External scripts
+
+
+////  OTHER NOTES
 - Text domain for translation: 'wfxgider'
-*/
-
-////  1  //////////// Setup main layout css
-
-// Un-comment the code below if you wish to override the options set in the admin area - filters always take priority!
-
-// function my_wfx_size_sidebar() { return 'quarter'; }
-// function my_wfx_size_content() { return 'three_quarter'; }
-// add_filter('wflux_sidebar_1_size', 'my_wfx_size_sidebar');
-// add_filter('wflux_content_1_size', 'my_wfx_size_content');
 
 
-////  2  //////////// Configure some Wonderflux functionality
+////  1  //////////// Wonderflux theme building functions
 
 
-// No add_action required on the my_wfx_layout function below, it is already hooked up for you ready to go!
+/*
+ *
+ * Setup some Wonderflux layout options
+ *
+ */
 function my_wfx_layout() {
 
 	// Configure background divs as required
@@ -52,29 +44,27 @@ function my_wfx_layout() {
 	wfx_background_divs('depth=3&location=header');
 	wfx_background_divs('depth=2&location=footer');
 
-	// With this filter you can remove (or conditionally remove) the sidebar
-	// Don't worry - the rest of the layout div's adapt to accomodate this automatically - cool!
+	// Remove the sidebar using filter
+	//layout div's adapt automatically - cool!
 	//add_filter('wflux_sidebar_1_display', 'N');
 
-	// Insert IE6 PNG fix
-	wfx_ie6_png('location=footer');
-
-	// Insert the Cycle JQuery plugin and supporting files
-	// 'config' argument allows use of custom cycle configuration file in wfx-girder/js/cycle/jquery.cycle.config.js
+	// Inserts JQuery and Cycle Javascript
+	//Configure using file js/cycle/jquery.cycle.config.js
 	wfx_js_cycle('config=theme');
 
 }
+add_action('get_header', 'my_wfx_layout', 1);
 
 
-////  3  //////////// Configure theme setup using Wonderflux theme building functions
+/*
+ * Defines and inserts widget area using the Wonderflux display hook system
+ * Set "location" parameter to 'my_custom_theme_code' to stop auto-insertion
+ * IMPORTANT - if you use 'my_custom_theme_code' location, you must insert this
+ * using standard WordPress theme code for your widgets to show in your theme!
+ *
+ */
+function my_wfx_widgets() {
 
-
-// IMPORTANT - Just include everything you need for Wonderflux child theme setup in one function
-function my_wfx_theme_config() {
-
-	// wfx_widgets() defines and inserts your widget area in one function using the Wonderflux display hook system
-	// Supply the "location" parameter the value "my_custom_theme_code" to stop the auto-insertion
-	// IMPORTANT - if you use "my_custom_theme_code" location, you must insert this using standard WordPress theme code for your widgets to show in your theme!
 	wfx_widgets(
 		array (
 
@@ -120,47 +110,43 @@ function my_wfx_theme_config() {
 	);
 
 }
-// Do Wonderflux theme setup helper function
-add_action( 'wp_loaded', 'my_wfx_theme_config' );
+add_action( 'wp_loaded', 'my_wfx_widgets' );
 
 
-////  4  //////////// Manipulate Wonderflux from child theme examples
+////  2  //////////// Manipulate Wonderflux from child theme examples
 
 
-////  EXAMPLE 1 - ADDING A FILTER
-
-
-// Core functionality can be filtered from child theme - allowing us to change and manipulate stuff easily while still keeping the original functionality intact.
+/*
+ * EXAMPLE 1 - ADDING A FILTER
+ * Core Wonderflux functionality can be filtered from child theme
+ *
+ */
 function my_wfx_filter_my_wf_functions() {
-	// Just a simple text string to appear at the bottom of the page in the code as a HTML comment (view source)
+	// Appears at the bottom of the page as a HTML comment (view source)
 	return 'Designed by me! Powered by WordPress and the Wonderflux theme framework - GPL ROCKS!';
 }
-// 'wflux_comment_footer_credit' is the name of the item setup for filtering
 add_filter( 'wflux_comment_code_credit', 'my_wfx_filter_my_wf_functions' );
 
-
-////  EXAMPLE 2 - REMOVING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
-
-
-// Example of removing a function called in the core Wonderflux theme code
-// If you want to remove more, simply add them to the my_wf_unhook_core_functions below, no need to create more functions!
+/*
+ * EXAMPLE 2 - REMOVING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
+ * Displays sizing configuration as comment in <head> of document output
+ *
+ */
 function my_wfx_unhook_core_functions() {
-
-	// 'wf_display_css_info' is a core Wonderflux display function
-	// It displays the current design configuration as set under Wonderflux -> Style Lab options in admin area
-	// Visit the site and 'view source' to see sizing configuration other important information
-	// Shown as comment in <head> of document output
 	remove_action('wf_head_meta', 'wfx_display_css_info');
 }
 //add_action('init','my_wfx_unhook_core_functions');
 
-
-////  EXAMPLE 3 - REPLACING A CORE WONDERFLUX FUNCTION
-
-
-// By using the same function name as used in the Wonderflux functions.php file, we can over-ride the existing core Wonderflux function
-// Often filters will be your best choice, but if you really want to do something fancy, you can using this method
-// UNCOMMENT OUT TO USE wfx_display_head_title creates the <TITLE></TITLE> tag content in your page output
+/*
+ * EXAMPLE 3 - REPLACING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
+ * By using the same function name as used in the Wonderflux functions.php file,
+ * we can override the existing core Wonderflux function. Often filters will be
+ * your best choice for tasks like this rather than replacing whole function.
+ *
+ * Wonderflux also is fully OOP structured for more advanced modification,
+ * please see Wonderflux source files for more information (wf-includes directory)
+ *
+ */
 /*
 function wfx_display_head_title() {
 
@@ -177,14 +163,38 @@ function wfx_display_head_title() {
 */
 
 
-////  5  //////////// Editable WordPress navigation menus
+////  3  //////////// Examples of filtering layout values
 
 
 /*
-The way the menus are inserted means that if you want to remove a menu,
-simply go to admin > Appearance > Menus > Manage locations and don't select a menu ('-- Select a Menu --' option)
-WordPress normally would then show a navigation with all of your page links in as default.
-This theme will simply not show anything - much neater!
+Un-comment the code below to override the options set in admin > Wonderflux > Stylelab
+NOTE THAT FILTERS ALWAYS TAKE PRIORITY over saved admin options
+*/
+
+
+/**
+ *
+ * Insert primary navigation in a fancy way by hooking into layout
+ * outside of main container (for full screen width)
+ * NOTE: Won't render a menu if not set (or menu is empty)
+ * in admin > Appearance > Menus / Manage locations
+ *
+ */
+// function my_wfx_size_sidebar() { return 'quarter'; }
+// function my_wfx_size_content() { return 'three_quarter'; }
+// add_filter('wflux_sidebar_1_size', 'my_wfx_size_sidebar');
+// add_filter('wflux_content_1_size', 'my_wfx_size_content');
+
+
+////  4  //////////// Editable WordPress navigation menus
+
+
+/*
+Menus will not show automatically unless you configure them in:
+admin > Appearance > Menus > Manage locations
+
+WordPress normally defaults to showing all of your page links when a menu
+is not configured. This theme will simply not show anything - much neater!
 */
 
 
@@ -201,13 +211,16 @@ add_action( 'wp_loaded', 'my_wfx_add_navigation' );
 
 
 /**
- * Insert primary navigation in a fancy way by hooking into layout outside of main container
- * NOTE: Won't render a menu if not set (or menu is empty) in admin > Appearance > Menus / Manage locations
+ * Insert primary navigation in a fancy way by hooking into layout
+ * outside of main container (for full screen width)
+ * NOTE: Won't render a menu if not set (or menu is empty)
+ * admin > Appearance > Menus / Manage locations
+ *
  */
 function my_wfx_insert_primary_nav() {
 
 	// Setup menu data
-	// Check if it has been set, or is empty - no-one likes showing all links!
+	// Check if it has been set or is empty - no-one likes showing all links!
 	$this_menu = wp_nav_menu(
 		array(
 			'container_class'	=> 'header-navigation clearfix',
@@ -230,14 +243,16 @@ add_action('wfmain_before_all_container','my_wfx_insert_primary_nav', 2);
 
 
 /**
- * Insert footer navigation in a simpler way using a Wonderflux hook
- * Function could be removed and just inserted straight into template file as normal
- * NOTE: Won't render a menu if not set (or menu is empty) in admin > Appearance > Menus / Manage locations
+ * Insert footer navigation by using a Wonderflux hook
+ * Could be removed and just inserted straight into template file as normal
+ * NOTE: Won't render a menu if not set (or menu is empty)
+ * Admin > Appearance > Menus / Manage locations
+ *
  */
 function my_wfx_insert_footer_nav() {
 
 	// Setup menu data
-	// Check if it has been set, or is empty - no-one likes showing all links!
+	// Check if it has been set or is empty - no-one likes showing all links!
 	$this_menu = wp_nav_menu(
 		array(
 			'container_class'	=> 'footer-navigation clearfix',
@@ -253,16 +268,16 @@ function my_wfx_insert_footer_nav() {
 add_action('wffooter_before_content','my_wfx_insert_footer_nav', 2);
 
 
-////  6  //////////// External scripts
+////  5  //////////// External scripts
 
 
 /**
  *
  * Register all additional CSS
- * You could register further CSS (if absolutely required!) here
+ * You could register further files here
  *
  */
-function my_wfx_register_css() {
+function my_wfx_register_files() {
 
 	wp_register_style(
 		'g-font-1',
@@ -273,19 +288,20 @@ function my_wfx_register_css() {
 	);
 
 }
-add_action( 'wp_enqueue_scripts', 'my_wfx_register_css' );
+add_action( 'wp_enqueue_scripts', 'my_wfx_register_files' );
 
 
 /**
  *
  * Enqueue all additional CSS
+ * You could enqueue further files here
  *
  */
-function my_wfx_enqueue_css() {
+function my_wfx_enqueue_files() {
 
 	// Signika Google font
 	wp_enqueue_style( 'g-font-1' );
 
 }
-add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_css' );
+add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_files' );
 ?>
