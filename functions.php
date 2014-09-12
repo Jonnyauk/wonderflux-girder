@@ -127,6 +127,7 @@ function my_wfx_filter_my_wf_functions() {
 }
 add_filter( 'wflux_comment_code_credit', 'my_wfx_filter_my_wf_functions' );
 
+
 /*
  * EXAMPLE 2 - REMOVING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
  * Displays sizing configuration as comment in <head> of document output
@@ -136,6 +137,7 @@ function my_wfx_unhook_core_functions() {
 	remove_action('wf_head_meta', 'wfx_display_css_info');
 }
 //add_action('init','my_wfx_unhook_core_functions');
+
 
 /*
  * EXAMPLE 3 - REPLACING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
