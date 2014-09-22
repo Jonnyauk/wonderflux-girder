@@ -2,6 +2,8 @@
 /*
 
 This is an example child theme for the Wonderflux theme framework.
+It requires Wondeflux to be installed in your theme directory:
+https://github.com/Jonnyauk/Wonderflux
 
 Configure the layout options in admin> Appearance > Wonderflux
 Drop by http://wonderflux.com/getting-started for more information.
