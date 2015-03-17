@@ -140,6 +140,23 @@ function my_wfx_unhook_core_functions() {
 //add_action('init','my_wfx_unhook_core_functions');
 
 
+/**
+ *
+ * Adds additional responsive CSS classes via Wonderflux filters
+ * to sidebar and main content
+ * @param  [string] [$input] Core Wonderflux CSS classes
+ * @return [string] normal classes+new RWD CSS class
+ *
+ */
+function my_wfx_filter_layout_responsive( $input ){
+
+	return $input . ' mq-small-min-box-1-1';
+
+}
+add_filter( 'wflux_sidebar_1_with_content_1', 'my_wfx_filter_layout_responsive' );
+add_filter( 'wflux_content_1_with_sidebar_1', 'my_wfx_filter_layout_responsive' );
+
+
 /*
  * EXAMPLE 3 - REPLACING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
  * By using the same function name as used in the Wonderflux functions.php file,
