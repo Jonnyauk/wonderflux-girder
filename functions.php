@@ -46,7 +46,7 @@ function my_wfx_layout() {
 
 	// Remove the sidebar using filter
 	//layout div's adapt automatically - cool!
-	//add_filter('wflux_sidebar_1_display', 'N');
+	//add_filter('wflux_sidebar_1_display', 'wfx__N' );
 
 	// Inserts JQuery and Cycle Javascript
 	//Configure using file js/cycle/jquery.cycle.config.js
