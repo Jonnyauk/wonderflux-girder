@@ -30,7 +30,7 @@
 
 		<div class="inside-std">
 			<h1 class="col-light"><a href="<?php echo home_url(); ?>/" title="Return to <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> homepage" rel="home"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a></h1>
-			<h3 class="col-light">Hello - this is the WFX Girder demo child theme for Wonderflux - rockin!</h3>
+			<h3 class="col-light">Hello - this is the WFX Girder demo child theme for Wonderflux.</h3>
 		</div>
 
 	</div>
@@ -39,7 +39,7 @@
 
 		<?php /*Note this doesnt have a .inside-std wrapper div - not required here thanks*/ ?>
 		<?php get_search_form(); ?>
-		<h4 class="col-light"><?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?></h4>
+		<h4 class="col-light-alt"><?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?></h4>
 
 	</div>
 
