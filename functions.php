@@ -1,34 +1,35 @@
 <?php
 /*
 
-This is an example child theme for the Wonderflux theme framework.
-
-Configure the layout options in admin> Appearance > Wonderflux
-Drop by http://wonderflux.com/getting-started for more information.
-
-If you want to create your own child theme for Wonderflux:
-
-1 - Duplicate the whole wfx-girder (this!) directory with all contained files.
-2 - Change the name of the directory (the one you duplicated in step 1).
-3 - Call your theme something different in style.css (Theme Name: My Theme).
-4 - Search and replace text string 'wfxgider' in all files
-	to replace the text domain for translation.
-5 - You are good to go!
+A demonstration responsive child theme for the Wonderflux WordPress theme framework (requires Wonderflux version 2 minimum)
+Could be used as a starter child theme, take a look at the code - lots of comments for you to learn how to use Wonderflux!
+REQUIRES the free, Open Source Wonderflux theme framework - available from https://github.com/Jonnyauk/Wonderflux
+PLEASE view readme file for more info.
 
 
 ////  CONTENTS
 1 - Wonderflux theme building functions
 2 - Manipulate Wonderflux from child theme examples
-3 - Examples of filtering layout values
-4 - Editable WordPress navigation menus
-5 - External scripts
+3 - Editable WordPress navigation menus
+4 - External scripts
 
 
 ////  OTHER NOTES
 - Text domain for translation: 'wfxgider'
 
 
-////  1  //////////// Wonderflux theme building functions
+/*
+	  #
+	 ##
+	# #
+	  #
+	  #
+	  #
+	#####
+
+	Wonderflux theme building functions
+
+*/
 
 
 /*
@@ -45,7 +46,7 @@ function my_wfx_layout() {
 	wfx_background_divs('depth=2&location=footer');
 
 	// Remove the sidebar using filter
-	//layout div's adapt automatically - cool!
+	//layout div's around main content adapt automatically - cool!
 	//add_filter('wflux_sidebar_1_display', 'wfx__N' );
 
 	// Inserts JQuery and Cycle Javascript
@@ -108,7 +109,18 @@ function my_wfx_widgets() {
 add_action( 'wp_loaded', 'my_wfx_widgets' );
 
 
-////  2  //////////// Manipulate Wonderflux from child theme examples
+/*
+	 #####
+	#     #
+	      #
+	 #####
+	#
+	#
+	#######
+
+	Manipulate Wonderflux from child theme examples
+
+*/
 
 
 /*
@@ -123,39 +135,37 @@ function my_wfx_filter_my_wf_functions() {
 add_filter( 'wflux_comment_code_credit', 'my_wfx_filter_my_wf_functions' );
 
 
-/*
- * EXAMPLE 2 - REMOVING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
- * Displays sizing configuration as comment in <head> of document output
- *
- */
-function my_wfx_unhook_core_functions() {
-	remove_action('wf_head_meta', 'wfx_display_css_info');
-}
-//add_action('init','my_wfx_unhook_core_functions');
-
-
 /**
- *
- * Adds additional responsive CSS classes via Wonderflux filters
- * to sidebar and main content
+ * EXAMPLE 2 - ADDING A FILTER
+ * Adds additional responsive CSS classes via Wonderflux filters to sidebar and main content
  * @param  [string] [$input] Core Wonderflux CSS classes
- * @return [string] normal classes+new RWD CSS class
+ * @return [string] existing classes+new RWD CSS class
  *
  */
 function my_wfx_filter_layout_responsive( $input ){
-
 	return $input . ' mq-small-min-box-1-1';
-
 }
 add_filter( 'wflux_sidebar_1_with_content_1', 'my_wfx_filter_layout_responsive' );
 add_filter( 'wflux_content_1_with_sidebar_1', 'my_wfx_filter_layout_responsive' );
 
 
 /*
- * EXAMPLE 3 - REPLACING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
+ * EXAMPLE 3 - UNHOOKING A CORE WONDERFLUX FUNCTION
+ * Displays sizing configuration as comment in <head> of document output
+ * TODO: Core functionality needs updating for Wonderflux v2
+ *
+ */
+function my_wfx_unhook_core_functions() {
+	remove_action('wf_head_meta', 'wfx_display_css_info');
+}
+add_action('init','my_wfx_unhook_core_functions');
+
+
+/**
+ * EXAMPLE 4 - REPLACING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
  * By using the same function name as used in the Wonderflux functions.php file,
  * we can override the existing core Wonderflux function. Often filters will be
- * your best choice for tasks like this rather than replacing whole function.
+ * your best choice for tasks like this rather than replacing the whole function.
  *
  * Wonderflux also is fully OOP structured for more advanced modification,
  * please see Wonderflux source files for more information (wf-includes directory)
@@ -177,21 +187,12 @@ function wfx_display_head_title() {
 */
 
 
-////  3  //////////// Examples of filtering layout values
-
-
-/*
-Un-comment the code below to override the options set in admin > Wonderflux > Stylelab
-NOTE THAT FILTERS ALWAYS TAKE PRIORITY over saved admin options
-*/
-
-
 /**
+ * EXAMPLE 5 - FILTER AND CHANGE SIZE DEFINITIONS (Remove comment to activate)
+ * Needs updating and checking for Flux Layout (Wonderflux v2)
  *
- * Insert primary navigation in a fancy way by hooking into layout
- * outside of main container (for full screen width)
- * NOTE: Won't render a menu if not set (or menu is empty)
- * in admin > Appearance > Menus / Manage locations
+ * Un-comment the code below to override the options set in admin > Wonderflux > Stylelab
+ * NOTE THAT FILTERS ALWAYS TAKE PRIORITY over saved admin options
  *
  */
 // function my_wfx_size_sidebar() { return 'quarter'; }
@@ -200,7 +201,18 @@ NOTE THAT FILTERS ALWAYS TAKE PRIORITY over saved admin options
 // add_filter('wflux_content_1_size', 'my_wfx_size_content');
 
 
-////  4  //////////// Editable WordPress navigation menus
+/*
+	 #####
+	#     #
+	      #
+	 #####
+	      #
+	#     #
+	 #####
+
+	Editable WordPress navigation menus
+
+*/
 
 
 /*
@@ -215,13 +227,13 @@ is not configured. This theme will simply not show anything - much neater!
 /**
  * Setup menus
  */
-function my_wfx_add_navigation(){
+function my_wfx_register_nav(){
 	register_nav_menus( array(
 		'primary' => __( 'Primary navigation', 'wfxgirder' ),
 		'secondary' => __( 'Secondary navigation', 'wfxgirder' ),
 	) );
 }
-add_action( 'wp_loaded', 'my_wfx_add_navigation' );
+add_action( 'wp_loaded', 'my_wfx_register_nav' );
 
 
 /**
@@ -283,7 +295,18 @@ function my_wfx_insert_footer_nav() {
 add_action('wffooter_before_content','my_wfx_insert_footer_nav', 2);
 
 
-////  5  //////////// External scripts
+/*
+	#
+	#    #
+	#    #
+	#    #
+	#######
+	     #
+	     #
+
+	External scripts
+
+*/
 
 
 /**
@@ -328,7 +351,7 @@ add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_files' );
  */
 function mywfx_enqueue_scripts() {
 	wp_enqueue_script( 'slicknav', WF_THEME_URL . '/js/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
-	wp_enqueue_script( 'theme-js', WF_THEME_URL . '/js/functions.js', array( 'jquery' ), '100', true );
+	wp_enqueue_script( 'theme-js', WF_THEME_URL . '/js/functions.js', array( 'jquery' ), '1.1', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'mywfx_enqueue_scripts' );
