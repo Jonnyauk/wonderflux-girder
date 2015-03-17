@@ -23,8 +23,8 @@ You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 .col-mid-alt { color: #909090; }
 .col-dark { color: #515151; }
 .col-dark-alt { color: #000; }
-.col-accent { color: #39737e; }
-.col-accent-alt { color: #00a9ac; }
+.col-accent { color: #00a9ac; }
+.col-accent-alt { color: #39737e; }
 
 /* @end */
 
@@ -36,7 +36,7 @@ p { color: #757575; }
 p.meta { margin-bottom: 9px; }
 
 h1, h3, h4, h5, h6 { color: #39737e; }
-h4, h5, h6 { font-weight: normal; font-style: normal; }
+h3, h4, h5, h6 { font-weight: normal; font-style: normal; }
 h2 { color: #515151; }
 h2.entry-title { margin-bottom: 0; margin-top: 0; }
 
@@ -52,8 +52,8 @@ h2.entry-title { margin-bottom: 0; margin-top: 0; }
 
 /* @group ******** Links ******** */
 
-a, a:visited, a:active { color: #39737e; text-decoration: none; }
-a:hover { color: #00a9ac; }
+a, a:visited, a:active { color: #00a9ac; text-decoration: none; }
+a:hover { color: #39737e; }
 .col-light a { color: #fff; }
 .col-light a:hover { color: #d7d7d7; }
 
