@@ -44,7 +44,7 @@ h2.entry-title { margin-bottom: 0; margin-top: 0; }
 
 /* @group Layout */
 
-.inside-std { margin: 0 20px 0 0; }
+.inside-std { padding: 0 20px 0 0; }
 
 /* @end */
 
@@ -232,12 +232,7 @@ div.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { backg
 
 #header-bg-1 { background: url(images/bg-flowers-lrg.png) repeat center bottom; }
 #header-bg-2 { background: url(images/bg_grad_bottom.png) repeat-x 0 bottom; }
-#header-content { 
-	background: url(../wonderflux/wf-content/backgrounds/solid-transparent-light/transparent_bg_light_10.png) repeat center top;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 40px 20px 25px;
-}
+#header-content { padding: 50px 0 30px 0; }
 
 .header-primary h1 { font-size: 2.8em; margin-bottom: 5px; margin-top: -8px; }
 
@@ -266,7 +261,7 @@ div.meta-content { border-top: 4px solid #e6e6e6; margin-top: 5px; padding-top: 
 .entry-content ul.wf-edit-meta { list-style-type: none; margin-left: 0; }
 img.button-more { margin-bottom: 20px; }
 
-#main-content .box-1-1.widget-box { background-color: #d6d7d6; padding: 23px 20px 15px; margin-bottom: 30px; }
+#main-content .widget-box { background-color: #d6d7d6; padding: 23px 20px 15px; margin-bottom: 30px; }
 
 /* @end */
 
@@ -353,7 +348,7 @@ input#searchsubmit:focus { outline: 0; }
 #footer-content { padding-top: 22px; }
 #footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
 #footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }
-.footer-primary-right .inside-std { margin-right: 0; }
+.footer-primary-right .inside-std { padding-right: 0; }
 
 /* @end */
 
@@ -365,12 +360,11 @@ input#searchsubmit:focus { outline: 0; }
 	/* @group Layout */
 	body { font-size: 90%; }
 	.container { width:95%; }
-	.mq-small-tiny-box-1-1 div.inside-std { background-color: #e86767; }
 	/* @end */
 
 	/* @group Footer */
-	.footer-primary-mid div.inside-std { margin: 0; }
-	.footer-primary-right div.inside-std { margin: 0; }
+	.footer-primary-mid div.inside-std { padding: 0; }
+	.footer-primary-right div.inside-std { padding: 0; }
 	/* @end */
 
 }
@@ -381,7 +375,7 @@ input#searchsubmit:focus { outline: 0; }
 	/* @group Layout */
  	body { font-size: 95%; }	
 	.container { width:90%; }
-	.mq-small-min-box-1-1 .inside-std { margin: 0; }
+	.mq-small-min-box-1-1 .inside-std { padding: 0; }
 	/* @end */
 
 	/* @group Navigation */
@@ -399,8 +393,8 @@ input#searchsubmit:focus { outline: 0; }
 	/* @end */
 
 /* @group Footer */
-	.footer-primary-mid .inside-std { margin-right: 10px; }
-	.footer-primary-right .inside-std { margin-left: 10px; margin-right: 0; }
+	.footer-primary-mid .inside-std { padding-right: 10px; }
+	.footer-primary-right .inside-std { padding-left: 10px; padding-right: 0; }
 	/* @end */
 }
 
