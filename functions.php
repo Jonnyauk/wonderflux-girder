@@ -2,8 +2,6 @@
 /*
 
 This is an example child theme for the Wonderflux theme framework.
-It requires Wondeflux to be installed in your theme directory:
-https://github.com/Jonnyauk/Wonderflux
 
 Configure the layout options in admin> Appearance > Wonderflux
 Drop by http://wonderflux.com/getting-started for more information.
@@ -43,7 +41,7 @@ function my_wfx_layout() {
 	// Configure background divs as required
 	wfx_background_divs('depth=1&location=site');
 	wfx_background_divs('depth=1&location=main');
-	wfx_background_divs('depth=3&location=header');
+	wfx_background_divs('depth=2&location=header');
 	wfx_background_divs('depth=2&location=footer');
 
 	// Remove the sidebar using filter
@@ -52,7 +50,8 @@ function my_wfx_layout() {
 
 	// Inserts JQuery and Cycle Javascript
 	//Configure using file js/cycle/jquery.cycle.config.js
-	wfx_js_cycle('config=theme');
+	// Removed - need to make responsive with Cycle2 upgrade
+	//wfx_js_cycle('config=theme');
 
 }
 add_action('get_header', 'my_wfx_layout', 1);
@@ -98,14 +97,8 @@ function my_wfx_widgets() {
 				"name" => __( 'Above content', 'wfxgider' ),
 				"location" => "wfloop_before",
 				"description" => __( 'Drag widgets here to be shown above all content.', 'wfxgider' ),
-				"containerclass" => "widget-box-main-content"
-			),
-
-			/* Another widget - as simple as it gets! */
-			array (
-				"name" => __( 'Below content', 'wfxgider' ),
-				"location" => "wfloop_after",
-				"description" => __( 'Drag widgets here to be shown below all content.', 'wfxgider' )
+				"containerclass" => "box-1-1 widget-box widget-box-above-content",
+				"titlestyle" => "h2"
 			)
 
 		)
@@ -139,6 +132,23 @@ function my_wfx_unhook_core_functions() {
 	remove_action('wf_head_meta', 'wfx_display_css_info');
 }
 //add_action('init','my_wfx_unhook_core_functions');
+
+
+/**
+ *
+ * Adds additional responsive CSS classes via Wonderflux filters
+ * to sidebar and main content
+ * @param  [string] [$input] Core Wonderflux CSS classes
+ * @return [string] normal classes+new RWD CSS class
+ *
+ */
+function my_wfx_filter_layout_responsive( $input ){
+
+	return $input . ' mq-small-min-box-1-1';
+
+}
+add_filter( 'wflux_sidebar_1_with_content_1', 'my_wfx_filter_layout_responsive' );
+add_filter( 'wflux_content_1_with_sidebar_1', 'my_wfx_filter_layout_responsive' );
 
 
 /*
@@ -228,6 +238,7 @@ function my_wfx_insert_primary_nav() {
 	$this_menu = wp_nav_menu(
 		array(
 			'container_class'	=> 'header-navigation clearfix',
+			'menu_id'			=> 'primary-header-nav', /*Need to add ID to target for slicknav.js*/
 			'theme_location'	=> 'primary',
 			'echo'				=> false,
 			'fallback_cb'		=> '__return_false'
@@ -308,4 +319,17 @@ function my_wfx_enqueue_files() {
 
 }
 add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_files' );
+
+
+/**
+ *
+ * Enqueue all js... do it!
+ *
+ */
+function mywfx_enqueue_scripts() {
+	wp_enqueue_script( 'slicknav', WF_THEME_URL . '/js/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
+	wp_enqueue_script( 'theme-js', WF_THEME_URL . '/js/functions.js', array( 'jquery' ), '100', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'mywfx_enqueue_scripts' );
 ?>

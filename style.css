@@ -1,19 +1,21 @@
 /*
 Theme Name: WFX Girder
 Theme URI: https://github.com/Jonnyauk/wonderflux-girder
-Description: This provides a working example of using the Wonderflux theme framework with a child theme. IMPORTANT - REQUIRES the Wonderflux framework, WordPress v3.2 or above.
+Description: This is an example responsive child theme for the Wonderflux theme framework (requires version 2 and above). Could be used as a starter theme for your own Wonderflux child theme.
 Author: Jonny Allbut
 Author URI: http://wonderflux.com
-Version: 0.83
+Version: 1.1
 Template: wonderflux
-Template Version: 1.2
-Tags: wonderflux
+Template Version: 2.0
+Tags: wonderflux, one-column, two-columns, right-sidebar, flexible-width, custom-menu, translation-ready
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-/* @group General rules */
+/* @group ******** General ******** */
+
+/* @group Colour scheme */
 
 .col-light { color: #fff; }
 .col-light-alt { color: #d7d7d7; }
@@ -21,58 +23,66 @@ You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 .col-mid-alt { color: #909090; }
 .col-dark { color: #515151; }
 .col-dark-alt { color: #000; }
-.col-accent { color: #39737e; }
-.col-accent-alt { color: #00a9ac; }
+.col-accent { color: #00a9ac; }
+.col-accent-alt { color: #39737e; }
+
+/* @end */
 
 /* @group Typography */
 
 body { font-family: 'Signika', sans-serif; }
 
-p { color: #757575; font-size: 1.2em; }
+p { color: #757575; }
 p.meta { margin-bottom: 9px; }
+
 h1, h3, h4, h5, h6 { color: #39737e; }
-h2 { color: #515151; font-size: 2.5em; }
+h3, h4, h5, h6 { font-weight: normal; font-style: normal; }
+h2 { color: #515151; }
 h2.entry-title { margin-bottom: 0; margin-top: 0; }
-h3 { font-size: 1.8em; }
+
+/* @end */
+
+/* @group Layout */
+
+.inside-std { margin: 0 20px 0 0; }
 
 /* @end */
 
 /* @end */
 
+/* @group ******** Links ******** */
 
-/* @group Links */
-
-a, a:visited, a:active { color: #39737e; text-decoration: none; }
-a:hover { color: #00a9ac; }
+a, a:visited, a:active { color: #00a9ac; text-decoration: none; }
+a:hover { color: #39737e; }
 .col-light a { color: #fff; }
 .col-light a:hover { color: #d7d7d7; }
 
 /* @end */
 
 
-/* @group Navgiation */
+/* @group ******** Navigation ******** */
 
 /* @group Primary navigation and common menu styling */
 
-.header-navigation-container { background: url(images/bg_grad_top.png) repeat-x 0 bottom; padding: 18px 0 33px; }
+.header-navigation-container { background: url(images/bg_grad_top.png) repeat-x 0 bottom; padding: 23px 0 38px; }
 
 ul.menu { padding: 0 0 0 10px; }
-
-ul.menu, ul.sub-menu {
-	list-style: none;
-	margin: 0;
-}
-
+ul.menu, ul.sub-menu { list-style: none; margin: 0; padding: 0; }
 ul.menu li a {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
 	display: block;
 	float: left;
-	font-size: 1.1em;
 	margin-bottom: 5px;
 	margin-right: 5px;
 	padding: 7px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition:    all 0.25s ease-in-out;
+	-ms-transition:     all 0.25s ease-in-out;
+	-o-transition:      all 0.25s ease-in-out;
+	transition:         all 0.25s ease-in-out;
+	font-size: 1.1em;
 }
 
 ul.menu li a,
@@ -94,7 +104,7 @@ ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #d7d7d7; 
 div.footer-navigation { padding-top: 20px; }
 
 div.footer-navigation ul.menu li a,
-div.footer-navigation ul.menu li a:visited { background-color: #909090; color: #d7d7d7; }
+div.footer-navigation ul.menu li a:visited { background-color: #909090; color: #d7d7d7; font-size: 90%; }
 div.footer-navigation ul.menu li a:hover,
 div.footer-navigation ul.menu li ul.sub-menu li a:hover { background-color: #39737e; color: #d7d7d7; }
 
@@ -107,50 +117,291 @@ div.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { backg
 
 /* @end */
 
+/* @group Mobile Slicknav */
+
+/* Mobile Menu Core Style */
+
+.slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
+.slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
+.slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0 0 0.438em; }
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em }
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow { font-size: 0.8em; margin: 0 0 0 0.4em; }
+.slicknav_nav .slicknav_item { cursor: pointer; }
+.slicknav_nav .slicknav_row { display: block; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+/* IE6/7 support */
+.slicknav_menu { *zoom: 1 }
+
+/* User Default Style */
+
+.slicknav_menu {
+	display:none;
+}
+
+.slicknav_menu {
+    font-size:16px;
+}
+/* Button */
+.slicknav_btn {
+    margin: 14px 0;
+    text-decoration:none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;  
+    background-color: #00a9ac;
+	float: left;
+}
+/* Button Text */
+.slicknav_menu .slicknav_menutxt {
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: none;
+}
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #f5f5f5;
+}
+.slicknav_menu {
+    padding: 0;
+	margin-bottom: 0;
+}
+.slicknav_nav {
+    color:#fff;
+    margin:0;
+    padding:0;
+    font-size:1em;
+}
+.slicknav_nav, .slicknav_nav ul {
+    list-style: none;
+    overflow:hidden;
+	margin-bottom: 10px;
+}
+.slicknav_nav ul {
+    padding:0;
+    margin:0 0 0 20px;
+}
+.slicknav_nav .slicknav_row {
+    padding: 5px 10px;
+    margin: 2px 5px 2px 0;
+}
+.slicknav_nav a{
+    padding: 5px 10px;
+    margin: 2px 5px 2px 0;
+    text-decoration:none;
+    color:#fff;
+}
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+    padding:0;
+    margin:0;
+}
+.slicknav_nav .slicknav_row:hover {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background:#ccc;
+    color:#fff;
+}
+.slicknav_nav a:hover{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background:#ccc;
+    color:#222;
+}
+.slicknav_nav .slicknav_txtnode {
+     margin-left:15px;   
+}
+
 /* @end */
 
+/* @end */
 
-/* @group Header */
+/* @group ******** Header ******** */
 
 #header-bg-1 { background: url(images/bg-flowers-lrg.png) repeat center bottom; }
 #header-bg-2 { background: url(images/bg_grad_bottom.png) repeat-x 0 bottom; }
-#header-content { background: url(../wonderflux/wf-content/backgrounds/solid-transparent-light/transparent_bg_light_10.png) repeat center top; }
-.box-header { padding: 20px 10px 0 10px; }
+#header-content { 
+	background: url(../wonderflux/wf-content/backgrounds/solid-transparent-light/transparent_bg_light_10.png) repeat center top;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 40px 20px 25px;
+}
+
+.header-primary h1 { font-size: 2.8em; margin-bottom: 5px; margin-top: -8px; }
 
 /* @end */
 
+/* @group ******** Main content ******** */
 
-/* @group Main content */
+#main-bg-1 { background: url(images/bg_grad_bottom_lrg_light.png) center bottom repeat-x #fff; }
+#main-content { padding-top: 20px; }
 
-#main-bg-1 { background: url(images/bg_grad_bottom_lrg_light.png) repeat-x center bottom; }
-#main-content { padding-top: 10px; }
-#content { margin-top: -7px; } /*Just helps things line up with the sidebar using default sidebar item header styling - you may need to adjust this to suit if you want pixel perfection! */
+.hentry {
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	border-bottom: 4px solid #d7d7d7;
+	padding-bottom: 25px;
+	padding-top: 30px;
+}
+.hentry.first-in-loop,
+.hentry.single-post { padding-top: 0;}
+.hentry.single-post,
+.hentry.last-in-loop { border-bottom: none; }
 
-.type-post { margin: 0 0 10px 0; border-bottom: 4px solid #d7d7d7; }
 .date-and-title { margin-bottom: 22px; }
 div.meta-content { border-top: 4px solid #e6e6e6; margin-top: 5px; padding-top: 10px; }
 .entry-content ul.wf-edit-meta { list-style-type: none; margin-left: 0; }
 img.button-more { margin-bottom: 20px; }
 
+#main-content .box-1-1.widget-box { background-color: #d6d7d6; padding: 23px 20px 15px; margin-bottom: 30px; }
+
 /* @end */
 
 
-/* @group Footer */
+/* @group ******** Comments ******** */
+
+#comments .commentlist { padding-left: 20px; }
+#comments .commentlist li { padding-left: 0; margin-bottom: 20px; }
+#commentform p { margin-bottom: 20px; }
+#commentform p label { display: block; clear: both; margin-bottom: 10px; }
+#commentform input, #commentform textarea { width: 90%; padding: 3px; }
+#commentform #form-allowed-tags { width: 90%; font-size: 0.8em; }
+#commentform input#submit.submit { padding: 6px; }
+
+/* @end */
+
+/* @group ******** Search form ******** */
+
+#searchform fieldset { border:none; margin: 0 0 20px; padding: 0; }
+#searchform fieldset label { display: none; }
+input#search.field {
+	border:none;
+	width: 80%;
+	float: left;
+	height: 35px;
+	margin: 0;
+	padding: 5px 8px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	color: #39737e;
+}
+.entry-content input#search.field { border: 2px solid #d7d7d7; border-right-style: none; width: 85%; }
+
+input#searchsubmit {
+	width: 20%;	
+	border: 0;
+	background: url(images/magnify-glass.svg) center center no-repeat #00a9ac;
+	text-indent: -9999em;
+	line-height:3000;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+	opacity: 0.5;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition:    all 0.25s ease-in-out;
+	-ms-transition:     all 0.25s ease-in-out;
+	-o-transition:      all 0.25s ease-in-out;
+	transition:         all 0.25s ease-in-out;
+	
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.entry-content input#searchsubmit { width: 15%; }
+
+input#searchsubmit:hover { opacity: 1.0; }
+
+input#search.field:focus,
+input#searchsubmit:focus { outline: 0; }
+
+/* @end */
+
+/* @group ******** Sidebar ******** */
+
+.sidebar-box,
+#sidebar .widget-box { margin-right: 20px; margin-bottom: 30px; }
+
+#sidebar ul { margin: 0; color: #757575; list-style-type: none; padding: 0; }
+#sidebar ul li { list-style-type: none; }
+#sidebar ul li ul li { margin-left: 10px; border-bottom-style: none; }
+.sidebar-title { margin-bottom: 10px; color: #7b7b7b; border-bottom: 2px solid #e6e6e6; font-size: 1.2em; padding-bottom: 2px; }
+
+/* @end */
+
+/* @group ******** Footer ******** */
 
 #footer-content { padding-top: 22px; }
 #footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
 #footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }
-.footer-secondary-left div.box-footer { padding-left: 10px; }
-#footer-secondary, #footer-wfx-credit { margin-left: 10px; }
+.footer-primary-right .inside-std { margin-right: 0; }
 
 /* @end */
 
+/* @group ********Media Queries******** */
 
-/* @group Sidebar */
+/* Tiny Media Query and below */
+@media screen and (max-width:480px) {
 
-.sidebar-box, .widget-box, .wf-meta-box { padding: 0 20px 15px 10px; }
-#sidebar ul { margin: 0; color: #757575; list-style-type: none; }
-#sidebar ul li a { list-style-type: none; font-size: 1.2em; }
-h4.sidebar-title { margin-bottom: 10px; color: #7b7b7b; border-bottom: 4px solid #e6e6e6; font-size: 1.5em; }
+	/* @group Layout */
+	body { font-size: 90%; }
+	.container { width:95%; }
+	.mq-small-tiny-box-1-1 div.inside-std { background-color: #e86767; }
+	/* @end */
+
+	/* @group Footer */
+	.footer-primary-mid div.inside-std { margin: 0; }
+	.footer-primary-right div.inside-std { margin: 0; }
+	/* @end */
+
+}
+
+/* Small Media Query and below */
+@media screen and (max-width:768px) {
+
+	/* @group Layout */
+ 	body { font-size: 95%; }	
+	.container { width:90%; }
+	.mq-small-min-box-1-1 .inside-std { margin: 0; }
+	/* @end */
+
+	/* @group Navigation */
+	.header-navigation-container { display:none; }
+	.slicknav_menu { display:block; }
+	/* @end */
+
+	/* @group Header */
+	#header-content { padding: 3px 20px 0; }
+	/* @end */
+
+	/* @group Sidebar */
+	.sidebar-box,
+	#sidebar .widget-box { margin-right: 0px; }
+	/* @end */
+
+/* @group Footer */
+	.footer-primary-mid .inside-std { margin-right: 10px; }
+	.footer-primary-right .inside-std { margin-left: 10px; margin-right: 0; }
+	/* @end */
+}
 
 /* @end */

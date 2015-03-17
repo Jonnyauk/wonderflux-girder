@@ -2,7 +2,7 @@
 
 ====================================
 #### Wonderflux Girder child theme for Wonderflux
-#### Verson v0.83
+#### Verson v1.1
 #### Copyright (c)2014 Jonny Allbut
 #### http://jonnya.net / @Jonnyauk
 ====================================
@@ -26,10 +26,32 @@ You may also view the license online: http://www.gnu.org/licenses/gpl-2.0.html
 About
 =================
 
-A demonstration child theme for the Wonderflux WordPress theme framework - https://github.com/Jonnyauk/Wonderflux
+A demonstration responsive child theme for the Wonderflux WordPress theme framework (requires Wonderflux version 2 minimum) - https://github.com/Jonnyauk/Wonderflux
 
 Could be used as a starter child theme, take a look at the code - lots of comments for you to learn how to use Wonderflux!
 
-REQUIRES the Wonderflux theme framework - available from https://github.com/Jonnyauk/Wonderflux
+NOTE: This theme is configured not to show menus (including the responsive menu) if they are not set-up in the admin area. Once activated, go to Appearance > Menus > Manage locations to set a menu to display in the header and footer).
 
-Read the getting started documentation at http://wonderflux.com/getting-started
+REQUIRES the free, Open Source Wonderflux theme framework - available from https://github.com/Jonnyauk/Wonderflux
+
+Read the Wonderflux getting started documentation at http://wonderflux.com/getting-started
+
+
+Installation
+=================
+
+* Copy Wonderflux theme framework to wp-content/themes directory (ensure directory is called 'wonderflux').
+* Copy the Girder theme wp-content/themes directory (this can be renamed to anything you wish).
+* In WordPress admin goto Appearance > Themes.
+* Activate WFX Girder theme.
+
+Configuration
+=================
+
+* Go to Appearance > Menus to configure editable menus in the theme (they do not appear if you do not configure them here!)
+* Go to Appearance > Widgets to configure editable widget areas within the theme.
+
+Advanced configuration
+=================
+
+* Go to Appearance > Wonderflux to configure more advanced theme options including layout CSS generator.
