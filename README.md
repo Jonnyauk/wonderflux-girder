@@ -36,6 +36,10 @@ REQUIRES the free, Open Source Wonderflux theme framework - available from https
 
 Read the Wonderflux getting started documentation at http://wonderflux.com/getting-started
 
+Demonstration
+=================
+
+* You can view a simple live demonstration of this theme at: http://wonderflux.com/demo-girder
 
 Installation
 =================
