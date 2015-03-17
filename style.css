@@ -266,6 +266,8 @@ div.meta-content { border-top: 4px solid #e6e6e6; margin-top: 5px; padding-top: 
 .entry-content ul.wf-edit-meta { list-style-type: none; margin-left: 0; }
 img.button-more { margin-bottom: 20px; }
 
+#main-content .box-1-1.widget-box { background-color: #d6d7d6; padding: 23px 20px 15px; margin-bottom: 30px; }
+
 /* @end */
 
 
@@ -336,7 +338,8 @@ input#searchsubmit:focus { outline: 0; }
 
 /* @group ******** Sidebar ******** */
 
-div.sidebar-box { margin-right: 20px; margin-bottom: 30px; }
+.sidebar-box,
+#sidebar .widget-box { margin-right: 20px; margin-bottom: 30px; }
 
 #sidebar ul { margin: 0; color: #757575; list-style-type: none; padding: 0; }
 #sidebar ul li { list-style-type: none; }
@@ -390,8 +393,12 @@ div.sidebar-box { margin-right: 20px; margin-bottom: 30px; }
 	#header-content { padding: 3px 20px 0; }
 	/* @end */
 
+	/* @group Sidebar */
+	.sidebar-box,
+	#sidebar .widget-box { margin-right: 0px; }
+	/* @end */
 
-	/* @group Footer */
+/* @group Footer */
 	.footer-primary-mid .inside-std { margin-right: 10px; }
 	.footer-primary-right .inside-std { margin-left: 10px; margin-right: 0; }
 	/* @end */

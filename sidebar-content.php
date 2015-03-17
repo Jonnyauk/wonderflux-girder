@@ -1,6 +1,11 @@
 <?php
 /**
- * Sidebar display content used as a fallback in all conditions when a sidebar-content-LOCATION.php doesn't exist in this child theme
+ * Sidebar display content - a template part inside sidebar.php
+ * Used when file 'sidebar-content-{location}.php' doesn't exist in this child theme.
+ * - Using additional 'sidebar-content-{location}.php' examples (see documentation for all):
+ * sidebar-content-page.php
+ * sidebar-content-single.php
+ * sidebar-content-404.php
  * @package Girder child theme for Wonderflux framework
  */
 ?>
@@ -31,5 +36,3 @@
 	</ul>
 
 </div>
-
-<?php wfx_edit_meta('wfcontrols=Y&div=Y&divclass=sidebar-box');?>
