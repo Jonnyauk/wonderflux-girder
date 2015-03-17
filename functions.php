@@ -325,4 +325,17 @@ function my_wfx_enqueue_files() {
 
 }
 add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_files' );
+
+
+/**
+ *
+ * Enqueue all js... do it!
+ *
+ */
+function mywfx_enqueue_scripts() {
+	wp_enqueue_script( 'slicknav', WF_THEME_URL . '/js/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
+	wp_enqueue_script( 'theme-js', WF_THEME_URL . '/js/functions.js', array( 'jquery' ), '100', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'mywfx_enqueue_scripts' );
 ?>
