@@ -41,7 +41,7 @@ function my_wfx_layout() {
 	// Configure background divs as required
 	wfx_background_divs('depth=1&location=site');
 	wfx_background_divs('depth=1&location=main');
-	wfx_background_divs('depth=3&location=header');
+	wfx_background_divs('depth=2&location=header');
 	wfx_background_divs('depth=2&location=footer');
 
 	// Remove the sidebar using filter
@@ -50,7 +50,8 @@ function my_wfx_layout() {
 
 	// Inserts JQuery and Cycle Javascript
 	//Configure using file js/cycle/jquery.cycle.config.js
-	wfx_js_cycle('config=theme');
+	// Removed - need to make responsive with Cycle2 upgrade
+	//wfx_js_cycle('config=theme');
 
 }
 add_action('get_header', 'my_wfx_layout', 1);
@@ -226,6 +227,7 @@ function my_wfx_insert_primary_nav() {
 	$this_menu = wp_nav_menu(
 		array(
 			'container_class'	=> 'header-navigation clearfix',
+			'menu_id'			=> 'primary-header-nav', /*Need to add ID to target for slicknav.js*/
 			'theme_location'	=> 'primary',
 			'echo'				=> false,
 			'fallback_cb'		=> '__return_false'
