@@ -99,15 +99,6 @@ function my_wfx_widgets() {
 				"description" => __( 'Drag widgets here to be shown above all content.', 'wfxgider' ),
 				"containerclass" => "box-1-1 widget-box widget-box-above-content",
 				"titlestyle" => "h2"
-			),
-
-			/* Another widget - as simple as it gets! */
-			array (
-				"name" => __( 'Below content', 'wfxgider' ),
-				"location" => "wfloop_after",
-				"description" => __( 'Drag widgets here to be shown below all content.', 'wfxgider' ),
-				"containerclass" => "box-1-1 widget-box widget-box-below-content",
-				"titlestyle" => "h2"
 			)
 
 		)
