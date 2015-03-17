@@ -1,8 +1,8 @@
 ![wonderflux](http://wonderflux.com/wonderflux-logo.png)
 
 ====================================
-#### Wonderflux Girder child theme for Wonderflux
-#### Verson v1.1
+#### WFX Girder child theme for Wonderflux
+#### Version v1.1
 #### Copyright (c)2014 Jonny Allbut
 #### http://jonnya.net / @Jonnyauk
 ====================================
@@ -27,8 +27,9 @@ About
 =================
 
 A demonstration responsive child theme for the Wonderflux WordPress theme framework (requires Wonderflux version 2 minimum) - https://github.com/Jonnyauk/Wonderflux
-
 Could be used as a starter child theme, take a look at the code - lots of comments for you to learn how to use Wonderflux!
+
+**You can view a live demonstration of this theme at: http://wonderflux.com/demo-girder**
 
 NOTE: This theme is configured not to show menus (including the responsive menu) if they are not set-up in the admin area. Once activated, go to Appearance > Menus > Manage locations to set a menu to display in the header and footer).
 
@@ -36,10 +37,6 @@ REQUIRES the free, Open Source Wonderflux theme framework - available from https
 
 Read the Wonderflux getting started documentation at http://wonderflux.com/getting-started
 
-Demonstration
-=================
-
-* You can view a simple live demonstration of this theme at: http://wonderflux.com/demo-girder
 
 Installation
 =================
@@ -54,8 +51,13 @@ Configuration
 
 * Go to Appearance > Menus to configure editable menus in the theme (they do not appear if you do not configure them here!)
 * Go to Appearance > Widgets to configure editable widget areas within the theme.
+* Go to Appearance > Wonderflux to configure more advanced theme options including layout CSS generator.
 
-Advanced configuration
+Using as a starter for your own theme
 =================
 
-* Go to Appearance > Wonderflux to configure more advanced theme options including layout CSS generator.
+1. Duplicate the whole wfx-girder (this!) directory with all contained files.
+2. Change the name of the directory (the one you duplicated in step 1).
+3. Call your theme something different at the top of style.css (Theme Name: My Theme).
+4. Search and replace text string 'wfxgider' in all files to replace the text domain for translation.
+5. You are good to go!
