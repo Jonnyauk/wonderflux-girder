@@ -86,19 +86,19 @@ function my_wfx_widgets() {
 			/* Simpler example */
 			array (
 				"name" => __( 'Below homepage sidebar', 'wfxgider' ),
-				"description" => __( 'Drag widgets here to be shown below the sidebar on just the homepage.', 'wfxgider' ),
+				"description" => __( 'Drag widgets here to be shown below the sidebar, ONLY on the homepage.', 'wfxgider' ),
 				"location" => "wfsidebar_after_home",
 				"titleclass" => "sidebar-title",
 				"containerclass" => "widget-box",
 				"titlestyle" => "h4"
 			),
 
-			/* Even simpler example! */
+			/* Special - just after homepage main content */
 			array (
-				"name" => __( 'Above content', 'wfxgider' ),
-				"location" => "wfloop_before",
-				"description" => __( 'Drag widgets here to be shown above all content.', 'wfxgider' ),
-				"containerclass" => "box-1-1 widget-box widget-box-above-content",
+				"name" => __( 'Below content', 'wfxgider' ),
+				"location" => "wfloop_after_found_posts_home",
+				"description" => __( 'Drag widgets here to be shown below the main content, ONLY on the homepage.', 'wfxgider' ),
+				"containerclass" => "box-1-1 widget-box widget-box-below-content",
 				"titlestyle" => "h2"
 			)
 
