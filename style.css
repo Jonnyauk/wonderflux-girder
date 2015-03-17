@@ -1,13 +1,13 @@
 /*
 Theme Name: WFX Girder
 Theme URI: https://github.com/Jonnyauk/wonderflux-girder
-Description: This provides a working example of using the Wonderflux theme framework with a child theme. IMPORTANT - REQUIRES the Wonderflux framework, WordPress v3.2 or above.
+Description: This is an example responsive child theme for the Wonderflux theme framework (requires version 2 and above). Could be used as a starter theme for your own Wonderflux child theme.
 Author: Jonny Allbut
 Author URI: http://wonderflux.com
-Version: 0.9
+Version: 1.1
 Template: wonderflux
 Template Version: 2.0
-Tags: wonderflux
+Tags: wonderflux, one-column, two-columns, right-sidebar, flexible-width, custom-menu, translation-ready
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
@@ -236,7 +236,7 @@ div.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { backg
 	background: url(../wonderflux/wf-content/backgrounds/solid-transparent-light/transparent_bg_light_10.png) repeat center top;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 40px 20px 15px;
+	padding: 40px 20px 25px;
 }
 
 .header-primary h1 { font-size: 2.8em; margin-bottom: 5px; margin-top: -8px; }
@@ -361,7 +361,7 @@ div.sidebar-box { margin-right: 20px; margin-bottom: 30px; }
 
 	/* @group Layout */
 	body { font-size: 90%; }
-	.container { width:95%; margin:0 auto; }
+	.container { width:95%; }
 	.mq-small-tiny-box-1-1 div.inside-std { background-color: #e86767; }
 	/* @end */
 
@@ -377,7 +377,7 @@ div.sidebar-box { margin-right: 20px; margin-bottom: 30px; }
 
 	/* @group Layout */
  	body { font-size: 95%; }	
-	.container { width:90%; margin:0 auto; }
+	.container { width:90%; }
 	.mq-small-min-box-1-1 .inside-std { margin: 0; }
 	/* @end */
 
@@ -398,20 +398,3 @@ div.sidebar-box { margin-right: 20px; margin-bottom: 30px; }
 }
 
 /* @end */
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-@media screen and (max-width: 40em) {
-	/* #menu is the original menu *!/
-
-}*/
