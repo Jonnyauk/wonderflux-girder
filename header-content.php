@@ -9,8 +9,8 @@
  * @package Girder child theme for Wonderflux framework
  */
 ?>
-		<div id="mobile-menu-1"></div>
 
+<?php /* IMPORTANT - Mobile menu gets added to div id="header-content" via slicknav.js */ ?>
 <div class="row" id="header-content">
 
 	<?php

@@ -9,7 +9,7 @@
 	( function() {
 
 		$('#primary-header-nav').slicknav({
-				prependTo:'#mobile-menu-1',
+				prependTo:'#header-content',
 				allowParentLinks: 'true',
 				label:'Menu',
 				closeOnClick:'false',
