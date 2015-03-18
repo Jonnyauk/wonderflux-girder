@@ -236,9 +236,9 @@ div.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { backg
 
 #header-bg-1 { background: url(images/bg-flowers-lrg.png) repeat center bottom; }
 #header-bg-2 { background: url(images/bg_grad_bottom.png) repeat-x 0 bottom; }
-#header-content { padding: 50px 0 30px 0; }
+#header-content { padding: 50px 0 40px; }
 
-.header-primary h1 { font-size: 2.8em; margin-bottom: 5px; margin-top: -8px; }
+.header-primary h1 { font-size: 2.8em; margin-bottom: 1px; margin-top: -10px; }
 
 /* @end */
 
@@ -337,6 +337,7 @@ input#searchsubmit:focus { outline: 0; }
 
 /* @group ******** Sidebar ******** */
 
+#sidebar { margin-top: 3px; } /* Fine tuning for alignment with main content */
 .sidebar-box,
 #sidebar .widget-box { margin-right: 20px; margin-bottom: 30px; }
 

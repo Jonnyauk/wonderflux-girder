@@ -39,7 +39,7 @@
 
 		<?php /*Note this doesnt have a .inside-std wrapper div - not required here thanks*/ ?>
 		<?php get_search_form(); ?>
-		<h4 class="col-light-alt"><?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?></h4>
+		<h5 class="col-light-alt"><?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?></h5>
 
 	</div>
 
