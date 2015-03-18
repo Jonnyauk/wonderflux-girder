@@ -32,13 +32,17 @@ You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 
 body { font-family: 'Signika', sans-serif; }
 
+h1, h3, h5 { color: #39737e; }
+h2, h4, h6 { color: #515151; }
+h4, h5, h6 { font-weight: normal; font-style: normal; }
 p { color: #757575; }
-p.meta { margin-bottom: 9px; }
 
-h1, h3, h4, h5, h6 { color: #39737e; }
-h3, h4, h5, h6 { font-weight: normal; font-style: normal; }
-h2 { color: #515151; }
-h2.entry-title { margin-bottom: 0; margin-top: 0; }
+h1 { font-size: 2.5em; }
+h2 { font-size: 2.1em; }
+h3,
+h4 { font-size: 1.8em; }
+h5, 
+h6 { font-size: 1.2em; }
 
 /* @end */
 
