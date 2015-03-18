@@ -18,7 +18,7 @@
 
 		<p><?php wfx_excerpt('limit=20'); ?></p>
 
-		<?php wfx_perma_img('img=button-read-more-alt-sml.png&width=100&height=20'); ?>
+		<p><a class="focus-button" href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'View %s', 'wfxgirder' ), the_title_attribute( 'echo=0' ) ); ?>"><?php esc_html_e( 'View', 'wonderflux' ) ?></a></p>
 
 	</div>
 
