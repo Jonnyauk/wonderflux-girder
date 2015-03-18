@@ -35,14 +35,22 @@ body { font-family: 'Signika', sans-serif; }
 h1, h3, h5 { color: #39737e; }
 h2, h4, h6 { color: #515151; }
 h4, h5, h6 { font-weight: normal; font-style: normal; }
-p { color: #757575; }
+p, ul, ol { color: #757575; }
 
 h1 { font-size: 2.5em; margin-bottom: 15px; }
 h2 { font-size: 2.1em; margin-bottom: 15px; }
+
 h3,
-h4 { font-size: 1.8em; margin-bottom: 10px; }
+h4 { font-size: 1.8em; margin-bottom: 15px; }
+
 h5, 
-h6 { font-size: 1.2em; margin-bottom: 10px; }
+h6,
+p, 
+ul, 
+ol { font-size: 1.1em; margin-bottom: 15px; }
+
+ul ul, ol ol { font-size:1em; } /* Keeps nested list items consistently sized */
+li.wf-edit-meta-links { margin-left: 0px; }
 
 /* @end */
 
@@ -63,15 +71,14 @@ a:hover { color: #39737e; }
 
 /* @end */
 
-
 /* @group ******** Navigation ******** */
 
 /* @group Primary navigation and common menu styling */
 
 .header-navigation-container { background: url(images/bg_grad_top.png) repeat-x 0 bottom; padding: 23px 0 38px; }
 
-ul.menu { padding: 0 0 0 10px; }
 ul.menu, ul.sub-menu { list-style: none; margin: 0; padding: 0; }
+ul.menu li { margin: 0; }
 ul.menu li a {
 	display: block;
 	float: left;
@@ -81,11 +88,11 @@ ul.menu li a {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-transition: all 0.25s ease-in-out;
-	-moz-transition:    all 0.25s ease-in-out;
-	-ms-transition:     all 0.25s ease-in-out;
-	-o-transition:      all 0.25s ease-in-out;
-	transition:         all 0.25s ease-in-out;
+	-webkit-transition: color 0.25s ease-in-out;
+	-moz-transition:    color 0.25s ease-in-out;
+	-ms-transition:     color 0.25s ease-in-out;
+	-o-transition:      color 0.25s ease-in-out;
+	transition:         color 0.25s ease-in-out;
 	font-size: 1.1em;
 }
 
@@ -269,7 +276,6 @@ img.button-more { margin-bottom: 20px; }
 
 /* @end */
 
-
 /* @group ******** Comments ******** */
 
 #comments .commentlist { padding-left: 20px; }
@@ -399,7 +405,7 @@ input#searchsubmit:focus { outline: 0; }
 	#sidebar .widget-box { margin-right: 0px; }
 	/* @end */
 
-/* @group Footer */
+	/* @group Footer */
 	.footer-primary-mid .inside-std { padding-right: 10px; }
 	.footer-primary-right .inside-std { padding-left: 10px; padding-right: 0; }
 	/* @end */
