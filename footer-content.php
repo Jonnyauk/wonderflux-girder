@@ -30,8 +30,15 @@
 	<div class="box-1-4 mq-small-min-box-1-1 footer-primary-left">
 
 		<div class="inside-std">
-			<h4>Footer primary left</h4>
-			<p>I could contain any content you like - or why not put in a WordPress widget area?</p>
+
+			<?php
+			// Check if we have widgets, if not show different content
+			if ( !dynamic_sidebar( 'Footer primary 1' ) ) : 
+				echo '<h4>Footer primary 1</h4>';
+				echo '<p>I can contain any WordPress widgets instead of this text, which will disappear if you use the Footer primary 1 widget area</p>';
+			endif;
+			?>
+
 		</div>
 
 	</div>
@@ -39,8 +46,15 @@
 	<div class="box-1-4 mq-small-box-1-2 mq-tiny-box-1-1 footer-primary-mid">
 
 		<div class="inside-std">
-			<h4>Footer primary middle</h4>
-			<p>I could contain any content you like - or why not put in a WordPress widget area?</p>
+
+			<?php
+			// Check if we have widgets, if not show different content
+			if ( !dynamic_sidebar( 'Footer primary 2' ) ) : 
+				echo '<h4>Footer primary 2</h4>';
+				echo '<p>I can contain any WordPress widgets instead of this text, which will disappear if you use the Footer primary 2 widget area</p>';
+			endif;
+			?>
+
 		</div>
 
 	</div>

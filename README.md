@@ -43,7 +43,7 @@ Theme features
 * Responsive layout
 * Automatic responsive menu for primary navigation
 * 2 editable menus (that auto-hide if not set in WordPress admin)
-* 3 editable widget areas
+* 5 editable widget areas
 
 Installation
 =================

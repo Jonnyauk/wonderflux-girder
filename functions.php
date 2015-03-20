@@ -32,7 +32,7 @@ PLEASE view readme file for more info.
 */
 
 
-/*
+/**
  *
  * Setup some Wonderflux layout options
  *
@@ -58,11 +58,10 @@ function my_wfx_layout() {
 add_action('get_header', 'my_wfx_layout', 1);
 
 
-/*
- * Defines and inserts widget area using the Wonderflux display hook system
- * Set "location" parameter to 'my_custom_theme_code' to stop auto-insertion
- * IMPORTANT - if you use 'my_custom_theme_code' location, you must insert this
- * using standard WordPress theme code for your widgets to show in your theme!
+/**
+ *
+ * Defines and automatically inserts widget areas using the Wonderflux display hook system.
+ * If no 'location' set, you insert widget area as normal in theme file.
  *
  */
 function my_wfx_widgets() {
@@ -70,7 +69,7 @@ function my_wfx_widgets() {
 	wfx_widgets(
 		array (
 
-			/* All parameters */
+			/* All parameters - hooked into wfsidebar_before_all, so no template code */
 			array (
 				"name" => __( 'Above sidebar', 'wfxgider' ),
 				"description" => __( 'Drag widgets here to be shown above the sidebar on all pages.', 'wfxgider' ),
@@ -83,7 +82,7 @@ function my_wfx_widgets() {
 				"after" => ""
 			),
 
-			/* Simpler example */
+			/* Special - hooked into wfsidebar_after_home, so no template code */
 			array (
 				"name" => __( 'Below homepage sidebar', 'wfxgider' ),
 				"description" => __( 'Drag widgets here to be shown below the sidebar, ONLY on the homepage.', 'wfxgider' ),
@@ -93,13 +92,31 @@ function my_wfx_widgets() {
 				"titlestyle" => "h4"
 			),
 
-			/* Special - just after homepage main content */
+			/* Special - hooked into wfloop_after_found_posts_home, so no template code */
 			array (
 				"name" => __( 'Below content', 'wfxgider' ),
 				"location" => "wfloop_after_found_posts_home",
 				"description" => __( 'Drag widgets here to be shown below the main content, ONLY on the homepage.', 'wfxgider' ),
 				"containerclass" => "box-1-1 widget-box widget-box-below-content",
 				"titlestyle" => "h2"
+			),
+
+			/* Simple example - no auto insertion (no $location param) so have to put standard WP code in footer to appear */
+			array (
+				"name" => __( 'Footer primary 1', 'wfxgider' ),
+				"description" => __( 'Drag widgets here to be shown in the footer area (small left area)', 'wfxgider' ),
+				"titleclass" => "sidebar-title",
+				"containerclass" => "widget-box",
+				"titlestyle" => "h4"
+			),
+
+			/* Simple example - no auto insertion (no $location param) so have to put standard WP code in footer to appear */
+			array (
+				"name" => __( 'Footer primary 2', 'wfxgider' ),
+				"description" => __( 'Drag widgets here to be shown in the footer area (small right area)', 'wfxgider' ),
+				"titleclass" => "sidebar-title",
+				"containerclass" => "widget-box",
+				"titlestyle" => "h4"
 			)
 
 		)
@@ -123,7 +140,8 @@ add_action( 'wp_loaded', 'my_wfx_widgets' );
 */
 
 
-/*
+/**
+ *
  * EXAMPLE 1 - ADDING A FILTER
  * Core Wonderflux functionality can be filtered from child theme
  *
@@ -136,6 +154,7 @@ add_filter( 'wflux_comment_code_credit', 'my_wfx_filter_my_wf_functions' );
 
 
 /**
+ *
  * EXAMPLE 2 - ADDING A FILTER
  * Adds additional responsive CSS classes via Wonderflux filters to sidebar and main content
  * @param  [string] [$input] Core Wonderflux CSS classes
@@ -149,7 +168,8 @@ add_filter( 'wflux_sidebar_1_with_content_1', 'my_wfx_filter_layout_responsive' 
 add_filter( 'wflux_content_1_with_sidebar_1', 'my_wfx_filter_layout_responsive' );
 
 
-/*
+/**
+ *
  * EXAMPLE 3 - UNHOOKING A CORE WONDERFLUX FUNCTION
  * Displays sizing configuration as comment in <head> of document output
  * TODO: Core functionality needs updating for Wonderflux v2
@@ -161,17 +181,15 @@ function my_wfx_unhook_core_functions() {
 add_action('init','my_wfx_unhook_core_functions');
 
 
-/**
- * EXAMPLE 4 - REPLACING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
- * By using the same function name as used in the Wonderflux functions.php file,
- * we can override the existing core Wonderflux function. Often filters will be
- * your best choice for tasks like this rather than replacing the whole function.
- *
- * Wonderflux also is fully OOP structured for more advanced modification,
- * please see Wonderflux source files for more information (wf-includes directory)
- *
- */
-/*
+ /**
+  * EXAMPLE 4 - REPLACING A CORE WONDERFLUX FUNCTION (Remove comment to activate)
+  * By using the same function name as used in the Wonderflux functions.php file,
+  * we can override the existing core Wonderflux function. Often filters will be
+  * your best choice for tasks like this rather than replacing the whole function.
+  *
+  * Wonderflux also is fully OOP structured for more advanced modification,
+  * please see Wonderflux source files for more information (wf-includes directory)
+  */
 function wfx_display_head_title() {
 
 	$this_title = esc_attr( get_bloginfo( 'title', 'display' ) );
@@ -184,7 +202,6 @@ function wfx_display_head_title() {
 	echo $output;
 
 }
-*/
 
 
 /**
@@ -193,7 +210,6 @@ function wfx_display_head_title() {
  *
  * Un-comment the code below to override the options set in admin > Wonderflux > Stylelab
  * NOTE THAT FILTERS ALWAYS TAKE PRIORITY over saved admin options
- *
  */
 // function my_wfx_size_sidebar() { return 'quarter'; }
 // function my_wfx_size_content() { return 'three_quarter'; }
@@ -225,7 +241,9 @@ is not configured. This theme will simply not show anything - much neater!
 
 
 /**
+ *
  * Setup menus
+ *
  */
 function my_wfx_register_nav(){
 	register_nav_menus( array(
@@ -237,6 +255,7 @@ add_action( 'wp_loaded', 'my_wfx_register_nav' );
 
 
 /**
+ *
  * Insert primary navigation in a fancy way by hooking into layout
  * outside of main container (for full screen width)
  * NOTE: Won't render a menu if not set (or menu is empty)
@@ -270,6 +289,7 @@ add_action('wfmain_before_all_container','my_wfx_insert_primary_nav', 2);
 
 
 /**
+ *
  * Insert footer navigation by using a Wonderflux hook
  * Could be removed and just inserted straight into template file as normal
  * NOTE: Won't render a menu if not set (or menu is empty)
