@@ -267,10 +267,8 @@ div.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { backg
 .hentry.single-post,
 .hentry.last-in-loop { border-bottom: none; }
 
-.date-and-title { margin-bottom: 22px; }
-div.meta-content { border-top: 4px solid #e6e6e6; margin-top: 5px; padding-top: 10px; }
+.meta-content { border-top: 4px solid #e6e6e6; margin-top: 5px; padding-top: 10px; }
 .entry-content ul.wf-edit-meta { list-style-type: none; margin-left: 0; padding-left: 0; }
-img.button-more { margin-bottom: 20px; }
 
 .widget-box.widget-below-content { background-color: #d6d7d6; padding: 23px 20px 15px; margin-bottom: 30px; }
 
