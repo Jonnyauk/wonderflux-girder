@@ -34,6 +34,17 @@ PLEASE view readme file for more info.
 
 /**
  *
+ * Wonderflux debug functionality
+ * Uncomment this (and be logged in as admin level user) to turn on debug mode in Wonderflux.
+ * 1) Reveals all hooks in layout
+ * 2) New menu under top admin menu - Wonderflux > Files in use - shows template files and source
+ *
+ */
+//define( 'WF_DEBUG', true );
+
+
+/**
+ *
  * Setup some Wonderflux layout options
  *
  */
