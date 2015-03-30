@@ -201,18 +201,18 @@ add_action('init','my_wfx_unhook_core_functions');
   * Wonderflux also is fully OOP structured for more advanced modification,
   * please see Wonderflux source files for more information (wf-includes directory)
   */
-function wfx_display_head_title() {
+// function wfx_display_head_title() {
 
-	$this_title = esc_attr( get_bloginfo( 'title', 'display' ) );
-	$this_desc = esc_attr( get_bloginfo( 'description', 'display' ) );
+// 	$this_title = esc_attr( get_bloginfo( 'title', 'display' ) );
+// 	$this_desc = esc_attr( get_bloginfo( 'description', 'display' ) );
 
-	$output = '<title>';
-	$output .= $this_title.' - All about '.$this_desc;
-	$output .= '</title>';
+// 	$output = '<title>';
+// 	$output .= $this_title.' - All about '.$this_desc;
+// 	$output .= '</title>';
 
-	echo $output;
+// 	echo $output;
 
-}
+// }
 
 
 /**
