@@ -352,7 +352,7 @@ function my_wfx_register_files() {
 		'g-font-1',
 		'http://fonts.googleapis.com/css?family=Signika',
 		'',
-		'1.0',
+		null,
 		'screen, projection'
 	);
 
