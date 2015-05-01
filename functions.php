@@ -54,7 +54,7 @@ function my_wfx_layout() {
 	wfx_background_divs('depth=1&location=site');
 	wfx_background_divs('depth=1&location=main');
 	wfx_background_divs('depth=2&location=header');
-	wfx_background_divs('depth=2&location=footer');
+	wfx_background_divs('depth=3&location=footer');
 
 	// Remove the sidebar using filter
 	//layout div's around main content adapt automatically - cool!

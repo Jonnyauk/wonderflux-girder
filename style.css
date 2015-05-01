@@ -4,7 +4,7 @@ Theme URI: https://github.com/Jonnyauk/wonderflux-girder
 Description: This is an example responsive child theme for the Wonderflux theme framework (requires version 2 and above). Could be used as a starter theme for your own Wonderflux child theme.
 Author: Jonny Allbut
 Author URI: http://wonderflux.com
-Version: 1.11
+Version: 1.2
 Template: wonderflux
 Template Version: 2.0
 Tags: responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-menu, translation-ready, wonderflux
@@ -30,7 +30,7 @@ You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 
 /* @group Typography */
 
-body { font-family: 'Signika', sans-serif; }
+body { font-family: 'Signika', sans-serif; background-color: #d5d6d5; }
 
 h1, h3, h5 { color: #39737e; }
 h2, h4, h6 { color: #515151; }
@@ -65,7 +65,14 @@ li.wf-edit-meta-links { margin-left: 0px; }
 /* @group ******** Links ******** */
 
 a, a:visited, a:active { color: #00a9ac; text-decoration: none; }
-a:hover { color: #39737e; }
+a:hover { 
+	color: #39737e; 
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition:    all 0.25s ease-in-out;
+	-ms-transition:     all 0.25s ease-in-out;
+	-o-transition:      all 0.25s ease-in-out;
+	transition:         all 0.25s ease-in-out;
+}
 .col-light a { color: #fff; }
 .col-light a:hover { color: #d7d7d7; }
 
@@ -88,11 +95,6 @@ ul.menu li a {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-transition: color 0.25s ease-in-out;
-	-moz-transition:    color 0.25s ease-in-out;
-	-ms-transition:     color 0.25s ease-in-out;
-	-o-transition:      color 0.25s ease-in-out;
-	transition:         color 0.25s ease-in-out;
 	font-size: 1.1em;
 }
 
@@ -108,11 +110,20 @@ ul.menu li ul.sub-menu li.current_page_item a { background-color: #00a9ac; color
 ul.menu li ul.sub-menu li a,
 ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #d7d7d7; color: #39737e; }
 
+ul.menu li a:hover,
+.footer-navigation ul.menu li a:hover {
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition:    all 0.25s ease-in-out;
+	-ms-transition:     all 0.25s ease-in-out;
+	-o-transition:      all 0.25s ease-in-out;
+	transition:         all 0.25s ease-in-out;
+}
+
 /* @end */
 
 /* @group Footer navigation */
 
-.footer-navigation { padding-top: 20px; }
+.footer-navigation { padding-top: 40px; }
 
 .footer-navigation ul.menu li a,
 .footer-navigation ul.menu li a:visited { background-color: #909090; color: #d7d7d7; font-size: 90%; }
@@ -358,8 +369,11 @@ input#searchsubmit:focus { outline: 0; }
 /* @group ******** Footer ******** */
 
 #footer-content { padding-top: 22px; }
+/*#footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
+#footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }*/
 #footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
-#footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }
+#footer-bg-2 { background: url(images/bg_grad_bottom_mid.png) repeat-x center bottom; }
+#footer-bg-3 { background: url(images/bg_grad_top.png) repeat-x center top; }
 .footer-primary-right .inside-std { padding-right: 0; }
 
 /* @end */
@@ -375,8 +389,8 @@ input#searchsubmit:focus { outline: 0; }
 	/* @end */
 
 	/* @group Footer */
-	.footer-primary-mid .inside-std { padding: 0; }
-	.footer-primary-right .inside-std { padding: 0; }
+	.footer-primary-right div.inside-std { padding: 0; }
+	.footer-primary-right div.inside-std { padding: 0; }
 	/* @end */
 
 }
@@ -396,7 +410,7 @@ input#searchsubmit:focus { outline: 0; }
 	/* @end */
 
 	/* @group Header */
-	#header-content { padding: 3px 20px 0; }
+	#header-content { padding: 3px 0 0; }
 	/* @end */
 
 	/* @group Sidebar */
@@ -408,6 +422,7 @@ input#searchsubmit:focus { outline: 0; }
 	.footer-primary-mid .inside-std { padding-right: 10px; }
 	.footer-primary-right .inside-std { padding-left: 10px; padding-right: 0; }
 	/* @end */
+
 }
 
 /* @end */
