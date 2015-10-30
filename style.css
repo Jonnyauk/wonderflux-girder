@@ -324,7 +324,6 @@ input#searchsubmit {
 	border: 0;
 	background: url(images/magnify-glass.svg) center center no-repeat #00a9ac;
 	text-indent: -9999em;
-	line-height:3000;
 	height: 35px;
 	margin: 0;
 	padding: 0;
