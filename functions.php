@@ -6,6 +6,7 @@ Could be used as a starter child theme, take a look at the code - lots of commen
 REQUIRES the free, Open Source Wonderflux theme framework - available from https://github.com/Jonnyauk/Wonderflux
 PLEASE view readme file for more info.
 
+Every Wonderflux framework function begins with wfx_ and is documented in wonderflux/functions.php
 
 ////  CONTENTS
 1 - Wonderflux theme building functions
@@ -50,11 +51,12 @@ PLEASE view readme file for more info.
  */
 function my_wfx_layout() {
 
-	// Configure background divs as required
+	// Configure background divs as required.
+	// Increase depth to add for for multi-layered backgrounds.
 	wfx_background_divs('depth=1&location=site');
 	wfx_background_divs('depth=1&location=main');
-	wfx_background_divs('depth=2&location=header');
-	wfx_background_divs('depth=3&location=footer');
+	wfx_background_divs('depth=1&location=header');
+	wfx_background_divs('depth=1&location=footer');
 
 	// Remove the sidebar using filter
 	//layout div's around main content adapt automatically - cool!
@@ -363,8 +365,8 @@ add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_css' );
 function mywfx_enqueue_scripts() {
 	$this_theme = wp_get_theme()->get( 'Version' );
 	$this_theme = (empty($this_theme)) ? '1.0' : $this_theme;
-	wp_enqueue_script( 'slicknav', WF_THEME_URL . '/js/jquery.slicknav.min.js', array( 'jquery' ), $this_theme, true );
-	wp_enqueue_script( 'theme-js', WF_THEME_URL . '/js/functions.js', array( 'jquery' ), $this_theme, true );
+	wp_enqueue_script( 'slicknav', WF_THEME_URL . '/assets/js/jquery.slicknav.min.js', array( 'jquery' ), $this_theme, true );
+	wp_enqueue_script( 'theme-js', WF_THEME_URL . '/assets/js/functions.js', array( 'jquery' ), $this_theme, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'mywfx_enqueue_scripts' );

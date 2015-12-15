@@ -24,18 +24,18 @@ You may also view the license online at http://www.gnu.org/licenses/gpl-2.0.html
 .col-dark { color: #515151; }
 .col-dark-alt { color: #000; }
 .col-accent { color: #00a9ac; }
-.col-accent-alt { color: #39737e; }
+.col-accent-alt { color: #003e51; }
 
 /* @end */
 
 /* @group Typography */
 
-body { font-family: 'Signika', sans-serif; background-color: #d5d6d5; }
+body { font-family: 'Signika', sans-serif; background-color: #003e51; }
 
-h1, h3, h5 { color: #39737e; }
+h1, h3, h5 { color: #003e51; }
 h2, h4, h6 { color: #515151; }
 h4, h5, h6 { font-weight: normal; font-style: normal; }
-p, ul, ol { color: #757575; }
+p, ul, ol { color: #515151; }
 
 h1 { font-size: 2.5em; margin-bottom: 15px; }
 h2 { font-size: 2.1em; margin-bottom: 15px; }
@@ -82,7 +82,7 @@ a:hover {
 
 /* @group Primary navigation and common menu styling */
 
-.header-navigation-container { background: url(images/bg_grad_top.png) repeat-x 0 bottom; padding: 23px 0 38px; }
+.header-navigation-container { background: url(assets/images/bg-grad-top.png) repeat-x 0 bottom; padding: 23px 0 38px; }
 
 ul.menu, ul.sub-menu { list-style: none; margin: 0; padding: 0; }
 ul.menu li { margin: 0; }
@@ -99,16 +99,16 @@ ul.menu li a {
 }
 
 ul.menu li a,
-ul.menu li a:visited { background-color: #d7d7d7; color: #39737e; }
+ul.menu li a:visited { background-color: #fff; color: #39737e; }
 ul.menu li a:hover,
-ul.menu li ul.sub-menu li a:hover { background-color: #39737e; color: #d7d7d7; }
+ul.menu li ul.sub-menu li a:hover { background-color: #003e51; color: #d7d7d7; }
 
 ul.menu li.current_page_item a,
 ul.menu li.current-menu-item a,
 ul.menu li ul.sub-menu li.current_page_item a { background-color: #00a9ac; color: #ffffff; }
 /*Fixes child page hierarchy colouring*/
 ul.menu li ul.sub-menu li a,
-ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #d7d7d7; color: #39737e; }
+ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #fff; color: #39737e; }
 
 ul.menu li a:hover,
 .footer-navigation ul.menu li a:hover {
@@ -126,7 +126,7 @@ ul.menu li a:hover,
 .footer-navigation { padding-top: 40px; }
 
 .footer-navigation ul.menu li a,
-.footer-navigation ul.menu li a:visited { background-color: #909090; color: #d7d7d7; font-size: 90%; }
+.footer-navigation ul.menu li a:visited { background-color: #003e51; color: #d7d7d7; font-size: 90%; }
 .footer-navigation ul.menu li a:hover,
 .footer-navigation ul.menu li ul.sub-menu li a:hover { background-color: #39737e; color: #d7d7d7; }
 
@@ -135,7 +135,7 @@ ul.menu li a:hover,
 .footer-navigation ul.menu li ul.sub-menu li.current_page_item a { background-color: #00a9ac; color: #ffffff; }
 /*Fixes child page hierarchy colouring*/
 .footer-navigation ul.menu li ul.sub-menu li a,
-.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #909090; color: #d7d7d7; }
+.footer-navigation ul.menu li ul.sub-menu li.page_item_has_children a { background-color: #003e51; color: #d7d7d7; }
 
 /* @end */
 
@@ -252,9 +252,7 @@ ul.menu li a:hover,
 /* @end */
 
 /* @group ******** Header ******** */
-
-#header-bg-1 { background: url(images/bg-flowers-lrg.png) repeat center bottom; }
-#header-bg-2 { background: url(images/bg_grad_bottom.png) repeat-x 0 bottom; }
+#header-bg-1 { background: url(assets/images/bg-grad-bottom.png) repeat-x 0 bottom; }
 #header-content { padding: 50px 0 40px; }
 
 .header-primary h1 { font-size: 2.8em; margin-bottom: 1px; margin-top: -10px; }
@@ -263,7 +261,7 @@ ul.menu li a:hover,
 
 /* @group ******** Main content ******** */
 
-#main-bg-1 { background: url(images/bg_grad_bottom_lrg_light.png) center bottom repeat-x #fff; }
+#main-bg-1 { background: rgba(255, 255, 255, 0.9); }
 #main-content { padding-top: 20px; }
 
 .hentry {
@@ -322,7 +320,7 @@ input#search.field {
 input#searchsubmit {
 	width: 20%;
 	border: 0;
-	background: url(images/magnify-glass.svg) center center no-repeat #00a9ac;
+	background: url(assets/images/magnify-glass.svg) center center no-repeat #00a9ac;
 	text-indent: -9999em;
 	height: 35px;
 	margin: 0;
@@ -368,12 +366,24 @@ input#searchsubmit:focus { outline: 0; }
 /* @group ******** Footer ******** */
 
 #footer-content { padding-top: 22px; }
-/*#footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
-#footer-bg-2 { background: url(images/bg_grad_top.png) repeat-x center top; }*/
-#footer-bg-1 { background-image: url(images/bg-flowers-lrg-alt.png); }
-#footer-bg-2 { background: url(images/bg_grad_bottom_mid.png) repeat-x center bottom; }
-#footer-bg-3 { background: url(images/bg_grad_top.png) repeat-x center top; }
+#footer-bg-1 { background: url(assets/images/bg-grad-top.png) center top repeat-x rgba(255, 255, 255, 0.35); }
 .footer-primary-right .inside-std { padding-right: 0; }
+
+#footer a { color: #fff; }
+#footer a:hover { color: #fff; }
+
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6 {
+	color: #fff;
+}
+
+#footer p {
+	color: #d7d7d7;
+}
 
 /* @end */
 
