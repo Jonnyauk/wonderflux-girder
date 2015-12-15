@@ -247,7 +247,7 @@ function my_wfx_register_nav(){
 		'secondary' => __( 'Secondary navigation', 'wfx-girder' ),
 	) );
 }
-add_action( 'wp_loaded', 'my_wfx_register_nav' );
+add_action( 'after_setup_theme', 'my_wfx_register_nav' );
 
 
 /**
