@@ -236,6 +236,13 @@ add_action('init','my_wfx_unhook_core_functions');
 add_editor_style( 'style.css' );
 
 
+	$background_defaults = array(
+		'default-color'          => '003e51',
+		'wp-head-callback'       => '_custom_background_cb',
+	);
+	add_theme_support( 'custom-background', $background_defaults );
+
+
 /*
 Menus will not show automatically unless you configure them in:
 admin > Appearance > Menus > Manage locations
