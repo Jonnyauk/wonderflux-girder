@@ -7,7 +7,7 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Read %s', 'wfxgirder' ), the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></h2>
+	<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Read %s', 'wfx-girder' ), the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></h2>
 
 	<div class="entry-content">
 
@@ -25,7 +25,7 @@
 
 	<?php
 	// Link pages
-	wp_link_pages( array( 'before' => '<div class="nav-posts">' . __( 'Pages:', 'wfxgirder' ), 'after' => '</div>' ) );
+	wp_link_pages( array( 'before' => '<div class="nav-posts">' . __( 'Pages:', 'wfx-girder' ), 'after' => '</div>' ) );
 	?>
 
 </div>

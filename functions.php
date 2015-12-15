@@ -15,7 +15,7 @@ PLEASE view readme file for more info.
 
 
 ////  OTHER NOTES
-- Text domain for translation: 'wfxgider'
+- Text domain for translation: 'wfx-girder'
 
 
 /*
@@ -134,7 +134,7 @@ function my_wfx_widgets() {
 	);
 
 }
-add_action( 'wp_loaded', 'my_wfx_widgets' );
+add_action( 'widgets_init', 'my_wfx_widgets' );
 
 
 /*
@@ -258,8 +258,8 @@ is not configured. This theme will simply not show anything - much neater!
  */
 function my_wfx_register_nav(){
 	register_nav_menus( array(
-		'primary' => __( 'Primary navigation', 'wfxgirder' ),
-		'secondary' => __( 'Secondary navigation', 'wfxgirder' ),
+		'primary' => __( 'Primary navigation', 'wfx-girder' ),
+		'secondary' => __( 'Secondary navigation', 'wfx-girder' ),
 	) );
 }
 add_action( 'wp_loaded', 'my_wfx_register_nav' );

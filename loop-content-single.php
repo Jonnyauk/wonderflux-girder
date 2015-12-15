@@ -13,7 +13,7 @@
 
 		<?php
 		the_content('');
-		wp_link_pages( array( 'before' => '<div class="nav-posts">' . __( 'Pages:', 'wfxgirder' ), 'after' => '</div>' ) );
+		wp_link_pages( array( 'before' => '<div class="nav-posts">' . __( 'Pages:', 'wfx-girder' ), 'after' => '</div>' ) );
 		wfx_edit_meta('intro=N&adminlink=N&postcontrols=N&pagecontrols=Nwfcontrols=N&widgetslink=N');
 		?>
 
@@ -36,8 +36,8 @@
 	<?php comments_template( '', true ); ?>
 
 	<div id="nav-posts" class="navigation">
-		<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'wfxgirder' ) . '</span> %title' ); ?></div>
-		<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'wfxgirder' ) . '</span>' ); ?></div>
+		<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'wfx-girder' ) . '</span> %title' ); ?></div>
+		<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'wfx-girder' ) . '</span>' ); ?></div>
 	</div>
 
 </div>
