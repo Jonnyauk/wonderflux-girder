@@ -236,26 +236,29 @@ add_action('init','my_wfx_unhook_core_functions');
 add_editor_style( 'style.css' );
 
 
-	$background_defaults = array(
-		'default-color'          => '003e51',
-		'wp-head-callback'       => '_custom_background_cb',
-	);
-	add_theme_support( 'custom-background', $background_defaults );
-
-
-/*
-Menus will not show automatically unless you configure them in:
-admin > Appearance > Menus > Manage locations
-
-WordPress normally defaults to showing all of your page links when a menu
-is not configured. This theme will simply not show anything - much neater!
-*/
+$background_defaults = array(
+	'default-color'          => '003e51',
+	'wp-head-callback'       => '_custom_background_cb',
+);
+add_theme_support( 'custom-background', $background_defaults );
 
 
 /**
+ * Setup translation.
+ */
+function my_wfx_lang_setup() {
+	load_theme_textdomain( 'wfx-girder', WF_THEME_URL . '/assets/languages' );
+}
+add_action( 'after_setup_theme', 'my_wfx_lang_setup' );
+
+
+/**
+ * Setup menus.
+ * Menus will not show automatically unless you configure them in:
+ * admin > Appearance > Menus > Manage locations
  *
- * Setup menus
- *
+ * WordPress normally defaults to showing all of your page links when a menu
+ * is not configured. This theme will simply not show anything - much neater!
  */
 function my_wfx_register_nav(){
 	register_nav_menus( array(

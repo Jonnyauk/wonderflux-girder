@@ -1,0 +1,130 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WFX Girder\n"
+"POT-Creation-Date: 2015-12-15 22:43+0000\n"
+"PO-Revision-Date: 2015-12-15 22:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions.php:87
+msgid "Above sidebar"
+msgstr ""
+
+#: functions.php:88
+msgid "Drag widgets here to be shown above the sidebar on all pages."
+msgstr ""
+
+#: functions.php:100
+msgid "Below homepage sidebar"
+msgstr ""
+
+#: functions.php:101
+msgid "Drag widgets here to be shown below the sidebar, ONLY on the homepage."
+msgstr ""
+
+#: functions.php:110
+msgid "Below content"
+msgstr ""
+
+#: functions.php:112
+msgid ""
+"Drag widgets here to be shown below the main content, ONLY on the homepage."
+msgstr ""
+
+#: functions.php:119
+msgid "Footer primary 1"
+msgstr ""
+
+#: functions.php:120
+msgid "Drag widgets here to be shown in the footer area (small left area)"
+msgstr ""
+
+#: functions.php:128
+msgid "Footer primary 2"
+msgstr ""
+
+#: functions.php:129
+msgid "Drag widgets here to be shown in the footer area (small right area)"
+msgstr ""
+
+#: functions.php:265
+msgid "Primary navigation"
+msgstr ""
+
+#: functions.php:266
+msgid "Secondary navigation"
+msgstr ""
+
+#: loop-content-category.php:12 loop-content-category.php:21
+#: loop-content-date.php:21
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: loop-content-category.php:21 loop-content-date.php:21
+msgid "View"
+msgstr ""
+
+#: loop-content-date.php:12 loop-content.php:10
+#, php-format
+msgid "Read %s"
+msgstr ""
+
+#: loop-content-page.php:17 loop-content-single.php:16 loop-content.php:28
+msgid "Pages:"
+msgstr ""
+
+#: loop-content-single.php:39
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: loop-content-single.php:40
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: sidebar-content.php:31
+msgid "Select category"
+msgstr ""
+
+#: sidebar-content.php:57
+msgid "Select Month"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "WFX Girder"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/Jonnyauk/wonderflux-girder"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This is an example responsive child theme for the Wonderflux theme framework "
+"(requires version 2 and above). Could be used as a starter theme for your "
+"own Wonderflux child theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jonny Allbut"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://wonderflux.com"
+msgstr ""
