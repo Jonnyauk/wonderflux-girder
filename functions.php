@@ -10,7 +10,7 @@ PLEASE view readme file for more info.
 ////  CONTENTS
 1 - Wonderflux theme building functions
 2 - Manipulate Wonderflux from child theme examples
-3 - Editable WordPress navigation menus
+3 - WordPress theme configuration
 4 - External scripts
 
 
@@ -222,9 +222,16 @@ add_action('init','my_wfx_unhook_core_functions');
 	#     #
 	 #####
 
-	Editable WordPress navigation menus
+	WordPRess theme configuration
 
 */
+
+
+/**
+ * Add editor style.
+ * A bit lazy, but at-least it should be consistent with front-end!
+ */
+add_editor_style( 'style.css' );
 
 
 /*
@@ -327,11 +334,11 @@ add_action('wffooter_before_content','my_wfx_insert_footer_nav', 2);
 
 /**
  *
- * Register all additional CSS
- * You could register further files here
+ * Enqueue all additional CSS.
+ * You could enqueue further files here.
  *
  */
-function my_wfx_register_files() {
+function my_wfx_enqueue_css() {
 
 	wp_register_style(
 		'g-font-1',
@@ -341,23 +348,11 @@ function my_wfx_register_files() {
 		'screen, projection'
 	);
 
-}
-add_action( 'wp_enqueue_scripts', 'my_wfx_register_files' );
-
-
-/**
- *
- * Enqueue all additional CSS
- * You could enqueue further files here
- *
- */
-function my_wfx_enqueue_files() {
-
 	// Signika Google font
 	wp_enqueue_style( 'g-font-1' );
 
 }
-add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_files' );
+add_action( 'wp_enqueue_scripts', 'my_wfx_enqueue_css' );
 
 
 /**

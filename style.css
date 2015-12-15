@@ -377,6 +377,12 @@ input#searchsubmit:focus { outline: 0; }
 
 /* @end */
 
+/* @group ******** WP Editor overrides ******** */
+
+.mce-content-body { background-color: #fff; }
+
+/* @end */
+
 /* @group ********Media Queries******** */
 
 /* Tiny Media Query and below */
