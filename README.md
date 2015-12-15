@@ -2,7 +2,7 @@
 
 ====================================
 #### WFX Girder child theme for Wonderflux
-#### Version v1.3 - DEVELOPMENT VERSION - NOT FOR LIVE PRODUCTION ENVIRONMENTS!
+#### Version v1.4 - DEVELOPMENT VERSION - NOT FOR LIVE PRODUCTION ENVIRONMENTS!
 #### Stable/production releases: https://github.com/Jonnyauk/wonderflux-girder/releases
 #### Copyright (c)2015 Jonny Allbut
 #### http://jonnya.net / @Jonnyauk
