@@ -28,18 +28,18 @@
 
 		<?php
 		$args = array(
-			'show_option_none' => __( 'Select category' ),
+			'show_option_none' => esc_html__( 'Select category', 'wfx-girder' ),
 			'show_count'       => 1,
 			'orderby'          => 'name',
 			'echo'             => 0,
 		);
+
+		$select  = wp_dropdown_categories( $args );
+		$replace = "<select$1 onchange='return this.form.submit()'>";
+		$select  = preg_replace( '#<select([^>]*)>#', $replace, $select );
+
+		echo $select;
 		?>
-
-		<?php $select  = wp_dropdown_categories( $args ); ?>
-		<?php $replace = "<select$1 onchange='return this.form.submit()'>"; ?>
-		<?php $select  = preg_replace( '#<select([^>]*)>#', $replace, $select ); ?>
-
-		<?php echo $select; ?>
 
 		<noscript>
 			<input type="submit" value="View" />
@@ -54,7 +54,7 @@
 	<h4 class="sidebar-title">Archives</h4>
 
 	<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-	  <option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option> 
+	  <option value=""><?php echo esc_attr__( 'Select Month', 'wfx_girder' ); ?></option> 
 	  <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 1 ) ); ?>
 	</select>
 
