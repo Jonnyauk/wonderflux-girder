@@ -28,7 +28,10 @@ About
 =================
 
 A demonstration responsive child theme for the Wonderflux WordPress theme framework (requires Wonderflux version 2 minimum) - https://github.com/Jonnyauk/Wonderflux
+
 Could be used as a starter child theme, take a look at the code - lots of comments for you to learn how to use Wonderflux!
+
+Showcases some of the features of creating your own Wonderflux child theme, such as smarter template parts, auto-insertion of widgets, filtering of Wonderflux output and much more ;)
 
 **You can view a live demonstration of this theme at: http://wonderflux.com/demo-girder**
 
