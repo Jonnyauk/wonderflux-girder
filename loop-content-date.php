@@ -1,6 +1,7 @@
 <?php
 /**
  * Loop display content when viewing a date archive
+ * If you delete this file loop-content-archive.php will be used instead
  * @package Girder child theme for Wonderflux framework
  */
 ?>
